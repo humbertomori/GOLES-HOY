@@ -1,9 +1,11 @@
 name: GOLES HOY - Actualizar pronosticos
 on:
-  schedule:
-    - cron: '0 7,17 * * *'
-      timezone: 'America/Asuncion'
+schedule:
+    - cron: '0 10,20 * * *'
   workflow_dispatch:
+   
+    
+  
 permissions:
   contents: write
 concurrency:
