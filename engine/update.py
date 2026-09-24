@@ -67,6 +67,54 @@ def fetch_schedule(today):
  raw=fetch_json(url)
  return [e for e in (raw.get('events') or []) if e.get('strSport')=='Soccer' and league_priority((e.get('strLeague') or '')+' '+(e.get('strEvent') or ''))>=0]
 
+def sportmonks_rows(payload, today):
+ """Normalize actual Sportmonks v3 fixtures; never manufacture names or times."""
+ result=[]
+ for item in payload.get('data') or []:
+  if not isinstance(item,dict) or item.get('placeholder'):continue
+  try:
+   start=datetime.datetime.fromisoformat(str(item['starting_at']).replace('Z','+00:00'))
+   # Sportmonks documents starting_at as UTC; don't interpret it as Paraguay time.
+   if start.tzinfo is None:start=start.replace(tzinfo=datetime.timezone.utc)
+   if start.astimezone(TZ).date().isoformat()!=today:continue
+   participants=item.get('participants') or []
+   home=next((p.get('name') for p in participants if p.get('meta',{}).get('location')=='home'),None)
+   away=next((p.get('name') for p in participants if p.get('meta',{}).get('location')=='away'),None)
+   if not home or not away:continue
+   league=item.get('league') or {}
+   league_name=league.get('name') or 'Liga sin indicar'
+   if league_priority(league_name)<0:continue
+   result.append({'idEvent':'sportmonks:'+str(item['id']),'strTimestamp':start.isoformat(),
+    'strHomeTeam':home,'strAwayTeam':away,'strLeague':league_name,
+    'strCountry':(league.get('country') or {}).get('name','País sin indicar') if isinstance(league.get('country'),dict) else 'País sin indicar',
+    '_source':'Sportmonks'})
+  except (KeyError,ValueError,TypeError,AttributeError):continue
+ return result
+
+def fetch_sportmonks(today,token=None):
+ """Live, documented Sportmonks v3 date endpoint, with pagination.
+
+ A local day in Paraguay overlaps two UTC dates, so query both; the
+ normalizer filters the returned fixtures back to the correct local date.
+ """
+ token=token or os.getenv('SPORTMONKS_API_TOKEN','').strip()
+ if not token:return [],'Sportmonks sin configurar: falta SPORTMONKS_API_TOKEN'
+ utc_start=datetime.datetime.combine(datetime.date.fromisoformat(today),datetime.time(),TZ).astimezone(datetime.timezone.utc)
+ dates=[utc_start.date(),(utc_start+datetime.timedelta(days=1)).date()]
+ rows=[]
+ for date in dict.fromkeys(dates):
+  for page in range(1,11):
+   params=urllib.parse.urlencode({'api_token':token,'include':'participants;league','per_page':50,'page':page})
+   url=f'https://api.sportmonks.com/v3/football/fixtures/date/{date.isoformat()}?{params}'
+   try:payload=fetch_json(url)
+   except urllib.error.HTTPError as exc:
+    raise RuntimeError(f'Sportmonks HTTP {exc.code} (comprobar token, plan o límite)') from None
+   rows.extend(sportmonks_rows(payload,today))
+   pagination=payload.get('pagination') or {}
+   if not pagination.get('has_more',False):break
+  else:raise RuntimeError('Sportmonks: más de 10 páginas; consulta incompleta')
+ return combine_fixtures(rows),'Sportmonks'
+
 def external_fixtures(today):
  """Owner-provided exports from sources with permission; no scraping or fabricated data.
  data/fixture_sources.json: {fecha, fuentes:[{nombre, partidos:[{id,hora,liga,pais,local,visitante}]}]}.
@@ -168,19 +216,23 @@ def visible_schedule(events, now):
 
 def run():
  now=datetime.datetime.now(TZ);today=now.date().isoformat()
- errors=[];events=[];external=[];source_names=[]
+ errors=[];events=[];external=[];source_names=[];sportmonks=[]
  try:external,source_names=external_fixtures(today)
  except (ValueError,OSError,TypeError) as exc:errors.append('Fuentes complementarias: '+str(exc))
  try:events=fetch_schedule(today)
  except (urllib.error.URLError,TimeoutError,ValueError,OSError) as exc:errors.append('TheSportsDB: '+str(exc))
- events=combine_fixtures(events,external)
+ try:sportmonks,sportmonks_status=fetch_sportmonks(today)
+ except (urllib.error.URLError,TimeoutError,ValueError,OSError,RuntimeError) as exc:
+  sportmonks_status='Sportmonks: '+str(exc);errors.append(sportmonks_status)
+ if sportmonks_status=='Sportmonks':source_names.append('Sportmonks')
+ events=combine_fixtures(sportmonks,events,external)
  try:picks=validated_feed(today)
  except (ValueError,OSError) as exc:picks=[];errors.append('Fuente autorizada: '+str(exc))
  previous=load_history();indexed={(str(x.get('fecha')),str(x.get('id'))):x for x in previous}
  for row in picks:indexed.setdefault((today,str(row['id'])),dict(row,fecha=today))
  # Free day schedule does not supply comprehensive final scores. Never mark a result guessed.
  history=sorted(indexed.values(),key=lambda x:(x.get('fecha',''),x.get('hora','')),reverse=True)[:2000]
- warning=('Sin pronósticos verificados: la API gratuita ofrece cartelera parcial, no cuotas ni historial suficientes. '
+ warning=('Sin pronósticos verificados: la cartelera disponible no aporta por sí sola cuotas e historial suficientes. '
           'Para generar selecciones se necesita análisis y cuotas verificables; la cartelera sola no permite calcular probabilidades.' if not picks else
           'Pronósticos de fuente autorizada; cobertura sujeta a disponibilidad.')
  if errors:warning+=' Fallos de fuentes: '+'; '.join(errors)
@@ -191,7 +243,7 @@ def run():
  # Always publish a CURRENT status, including when a source is unavailable.
  # Never re-display yesterday's predictions as current.
  atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'TheSportsDB + fuentes complementarias',
-  'eventos_muestra':len(events),'fuentes_complementarias':source_names,'estado':'error' if errors else 'cobertura parcial',
+  'eventos_muestra':len(events),'sportmonks_eventos':len(sportmonks),'sportmonks_estado':sportmonks_status,'fuentes_complementarias':source_names,'estado':'error' if errors else 'cobertura según plan y fuentes',
   'pronosticos_nuevos':len(picks),'errores':errors})
  atomic_write('history.json',{'partidos':history})
  atomic_write('latest.json',out)

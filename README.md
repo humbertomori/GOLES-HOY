@@ -48,3 +48,22 @@ se presenta como pronóstico. Para publicar selecciones, el archivo opcional
 No se prometen diez pronósticos si faltan datos. La automatización de GitHub
 publica solo archivos ya accesibles en el repositorio: no puede leer un archivo
 que permanezca exclusivamente en el celular.
+
+## Conexión real de Sportmonks (API v3)
+El motor consulta `https://api.sportmonks.com/v3/football/fixtures/date/AAAA-MM-DD`
+con `include=participants;league`, paginación y ambos días UTC que cruzan el día
+local de Paraguay. Conserva TheSportsDB como respaldo. El número de partidos
+que devuelva depende de la cobertura del plan de Sportmonks.
+
+**Activación necesaria, una sola vez:** crear un token propio en Sportmonks y
+registrarlo en GitHub → Settings → Secrets and variables → Actions → New
+repository secret, nombre `SPORTMONKS_API_TOKEN`, valor = token personal.
+No pegar el token en archivos, commits ni chats. El workflow ya está conectado
+al secreto; no hay que editar Python ni volver a compilar la APK.
+
+Sin token, el motor muestra claramente Sportmonks sin configurar y sigue con
+TheSportsDB. No se han comprobado consultas reales autenticadas porque no se
+proporcionó token. Sportmonks aporta cartelera, **no garantiza diez pronósticos**:
+las selecciones siguen requiriendo estadísticas y cuotas verificables mediante
+el feed de análisis autorizado; no se inventan porcentajes. Apostala/Sofascore
+no están conectados automáticamente en esta entrega.
