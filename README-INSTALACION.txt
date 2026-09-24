@@ -1,0 +1,1 @@
+APK independiente GOLES HOY. Subir el CONTENIDO de esta carpeta a su propio repositorio GitHub. Actions > build > Artifacts para descargar APK debug. La APK muestra el sitio existente y no crea ni actualiza pronósticos en el servidor.

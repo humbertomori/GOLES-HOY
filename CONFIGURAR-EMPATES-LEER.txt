@@ -1,0 +1,7 @@
+CORRECCIÓN EMPATES HOY — 23/09/2026
+
+1. El servidor app.py incluye análisis de empates, historial /api/history y actualización a las 08:00 America/Asuncion.
+2. Publicar app.py en un hosting Python con disco persistente, instalar requirements.txt, configurar APOSTALA_FEED_URL con un proveedor autorizado que entregue el JSON descrito en README.md. Sin fuente de partidos/cuotas verificables no habrá pronósticos nuevos.
+3. En GitHub, Settings > Secrets and variables > Actions > Variables: crear EMPATES_SERVER_URL con URL HTTPS del servidor desplegado, terminada en /. Volver a ejecutar Actions. La APK dirigirá EMPATES a este servidor; GOLES sigue igual.
+4. Sin configurar EMPATES_SERVER_URL la APK seguirá abriendo el sitio antiguo y puede continuar mostrando el 22. El ZIP no publica por sí mismo servidores ni obtiene credenciales de terceros.
+5. Las rutas POST /api/import, /api/refresh y /api/result requieren autenticación antes de desplegar el servicio públicamente.

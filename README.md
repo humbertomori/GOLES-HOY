@@ -1,69 +1,27 @@
-# GOLES HOY — corrección del proyecto subido a GitHub
+# GOLES HOY + EMPATES HOY — reconstrucción funcional
 
-## Qué corrige
-- El motor **ya no depende de API-FOOTBALL ni solicita ninguna clave**.
-- Consulta TheSportsDB con clave pública `123` y publica estado actual con fecha válida, incluso si hay cero pronósticos o falla una fuente.
-- No muestra pronósticos antiguos como si fueran de hoy ni inventa cuotas, tarjetas o probabilidades.
-- Mantiene historial y protección contra fuentes caídas.
-- `update.yml` y `android.yml` están exclusivamente en `.github/workflows/`; no hay carpeta `workflows/` duplicada.
-- Las cuotas no se muestran en la APK.
+## Ejecutar
+`pip install -r requirements.txt && python app.py`; abrir `http://localhost:8080`.
+Servidor persistente necesario para ejecución desatendida a las 07:00 America/Asuncion. **No funciona si el servidor duerme**, se reinicia a esa hora, o el hosting no permite procesos persistentes. Desplegar una sola réplica (SQLite + scheduler) con disco persistente; en múltiples réplicas mover el scheduler a un cron externo y usar base de datos compartida.
 
-## Limitación importante
-TheSportsDB gratuito limita `eventsday` a **3 eventos** y no proporciona datos suficientes de cuotas e historial para elegir diez partidos. Aposta.LA y Sofascore no tienen integración autorizada verificada en este proyecto. No afirmamos que haya 10 pronósticos automáticos ni que el motor haga un cruce que no puede hacer. El archivo `data/authorized_analysis.json` es un **formato opcional para un proveedor autorizado** con datos verificables; no se suministran datos inventados.
+## Automatización real y fuente Apostala
+Configurar `APOSTALA_FEED_URL` apuntando a una integración **autorizada y verificable** que devuelva JSON de encuentros confirmados en la cartelera oficial de Apostala. Opcional `APOSTALA_FEED_TOKEN`. **Este paquete no contiene ni afirma tener una API oficial de Apostala**; sin integración, a las 07:00 se ejecuta pero reporta `NO_FEED` y NO inventa partidos. No usar scraping que eluda autenticación, restricciones ni términos de servicio. La disponibilidad y cuotas cambian: volver a confirmar antes de apostar.
 
-## Puesta en marcha
-1. Sustituir los archivos del repositorio por el contenido de este ZIP **conservando `.github`**; no arrastrar el ZIP directamente a GitHub.
-2. Ejecutar Actions → GOLES HOY - Actualizar pronosticos → Run workflow.
-3. Comprobar `data/latest.json`: fecha/hora actuales y estado explícito. No hace falta volver a compilar APK para actualizar el JSON remoto.
-4. La compilación APK está configurada en `.github/workflows/android.yml`, pero **esta entrega no ha sido compilada en GitHub**.
+JSON: array o `{"fixtures":[...]}`. Cada objeto debe tener:
+`id,day,home,away,league,country,kickoff,source,apostala_confirmed,odd_o25,odd_btts,odd_draw,home_scored,home_conceded,away_scored,away_conceded,n_home,n_away,red_risk`.
+`day` en YYYY-MM-DD Paraguay, `apostala_confirmed` boolean true, `source` referencia verificable Apostala, `kickoff` hora Paraguay; medias de goles local/visitante con al menos cinco partidos en cada muestra; `red_risk` de 0 a 1 (si no hay datos, 0 no significa ausencia de riesgo: marcar falta de información en fuente). Cuotas decimales >1. Los mercados ausentes pueden ser null. Fuente y fecha de verificación se guardan.
 
-La programación usa 10:00 y 20:00 UTC = 07:00 y 17:00 en Paraguay; GitHub puede retrasar ejecuciones. No se garantiza ejecución al minuto.
+## Carga alternativa
+POST `/api/import` con el mismo JSON o CSV con cabecera `Content-Type: text/csv` y las mismas columnas; no acepta partidos sin `apostala_confirmed=true`. Ejemplo con archivo `cartelera.json`:
+`curl -X POST http://localhost:8080/api/import -H 'Content-Type: application/json' --data-binary @cartelera.json`
 
+POST `/api/refresh` ejecuta el feed y reconstruye selección; GET `/api/status`; GET `/api/picks`; POST `/api/result` JSON `{"fixture_id":"ID","home":2,"away":1}` para registrar marcador. Proteger rutas POST con autenticación en un despliegue público: el prototipo no tiene panel de administración ni control de acceso.
 
-## Alcance de esta revisión
-La aplicación separa la cartelera parcial de TheSportsDB de los pronósticos verificados.
-Los partidos mostrados en «Cartelera disponible» NO son selecciones +2.5 ni BTTS.
-La API gratuita de TheSportsDB limita el calendario diario y no proporciona una
-cartelera completa de Apostala ni las cuotas necesarias para calcular el Top 10.
-El workflow se programa a las 08:00 Paraguay (11:00 UTC), sujeto a demoras de GitHub.
+## Método
+Poisson independiente: λ local = 1.07*(goles local a favor + goles visitante recibidos)/2; λ visitante = .94*(goles visitante a favor + goles local recibidos)/2. P(+2.5), P(ambos), P(empate) derivadas; penalización conservadora por muestra y riesgo de roja; edge = probabilidad modelo - 1/cuota. GOLES: máximo 10, probabilidad >=62% y edge >=1.5 puntos; EMPATES máximo 5 y edge >=1.5 puntos. Máximo dos por liga y cuatro por país, un mercado por encuentro dentro de cada ranking. No se completan cupos. No se afirma que estos coeficientes estén calibrados ni que reproduzcan el supuesto 90% anterior; hace falta historial auditado y backtesting fuera de muestra. No se dispone de xG, bajas o alineaciones en el feed base; para producción deben incorporarse como fuentes verificadas y recalibrarse.
 
-## Fuentes múltiples: alcance verificado
+## Limitaciones explícitas
+No publica en los dos dominios antiguos ni crea nuevos dominios por sí solo. Requiere hosting activo, configuración de feed autorizado y despliegue. SQLite almacena el historial en disco persistente. Los resultados se ingresan por `/api/result`; integrar un proveedor de resultados con identificadores fiables para cierre automático. Las selecciones quedan congeladas al crearse; una actualización no sobrescribe cuotas ni probabilidades históricas. No garantiza ganancias ni tasa de aciertos.
 
-El motor combina TheSportsDB (cartelera parcial) con `data/fixture_sources.json`,
-una **exportación aportada por el propietario con permiso de uso**. No extrae
-automáticamente datos de Sofascore ni de Apostala: no se ha verificado una API
-pública autorizada para esos servicios. Los diarios pueden aportar contexto,
-pero sus noticias no equivalen a estadísticas ni cuotas. No inventar encuentros.
-
-Formato opcional de `data/fixture_sources.json` (no se incluye un archivo con
-partidos de ejemplo en producción):
-
-```json
-{"fecha":"AAAA-MM-DD","fuentes":[{"nombre":"Apostala (exportación autorizada)","partidos":[{"id":"ID_REAL","hora":"2026-09-24T18:00:00-03:00","liga":"Liga real","pais":"PY","local":"Equipo A","visitante":"Equipo B"}]}]}
-```
-
-Las fuentes se deduplican por local, visitante y hora UTC; la cartelera nunca
-se presenta como pronóstico. Para publicar selecciones, el archivo opcional
-`data/authorized_analysis.json` requiere probabilidades y cuotas fundamentadas.
-No se prometen diez pronósticos si faltan datos. La automatización de GitHub
-publica solo archivos ya accesibles en el repositorio: no puede leer un archivo
-que permanezca exclusivamente en el celular.
-
-## Conexión real de Sportmonks (API v3)
-El motor consulta `https://api.sportmonks.com/v3/football/fixtures/date/AAAA-MM-DD`
-con `include=participants;league`, paginación y ambos días UTC que cruzan el día
-local de Paraguay. Conserva TheSportsDB como respaldo. El número de partidos
-que devuelva depende de la cobertura del plan de Sportmonks.
-
-**Activación necesaria, una sola vez:** crear un token propio en Sportmonks y
-registrarlo en GitHub → Settings → Secrets and variables → Actions → New
-repository secret, nombre `SPORTMONKS_API_TOKEN`, valor = token personal.
-No pegar el token en archivos, commits ni chats. El workflow ya está conectado
-al secreto; no hay que editar Python ni volver a compilar la APK.
-
-Sin token, el motor muestra claramente Sportmonks sin configurar y sigue con
-TheSportsDB. No se han comprobado consultas reales autenticadas porque no se
-proporcionó token. Sportmonks aporta cartelera, **no garantiza diez pronósticos**:
-las selecciones siguen requiriendo estadísticas y cuotas verificables mediante
-el feed de análisis autorizado; no se inventan porcentajes. Apostala/Sofascore
-no están conectados automáticamente en esta entrega.
+## Interfaz móvil unificada (23/09/2026)
+Una sola pantalla con pestañas GOLES HOY / EMPATES HOY, estado de fuente, historial y botón de actualización. Manifest PWA para añadir a pantalla de inicio desde Chrome en Android una vez desplegada con HTTPS. **No es APK**, no funciona offline, y no habilita el feed por sí sola. Los dos enlaces públicos antiguos permanecen sin modificar.
