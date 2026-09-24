@@ -34,3 +34,8 @@
 - Pruebas de regresión verifican ocultación de cuotas y sincronización de interfaz web/Android.
 - **No es una APK ya compilada ni un servicio desplegado.** Sin clave autorizada de cuotas y estadísticas suficientes, la aplicación mostrará cero pronósticos verificados.
 - No hay integración automatizada de Apostala, Sofascore ni prensa; sus accesos deben verificarse antes de incluirlos.
+
+## Importante para cargar en GitHub desde el navegador
+Este ZIP conserva `.github/workflows/android.yml` y `.github/workflows/update.yml`. Sin embargo, GitHub **no importa automáticamente un ZIP** y la carga por arrastrar carpetas puede omitir `.github` porque comienza con un punto. Volver a comprimir el proyecto NO cambia esa limitación del navegador. Para conservar la estructura, subir mediante Git (por ejemplo GitHub Desktop) o crear los dos archivos en la ruta exacta desde el editor web. No subir `workflows/` a la raíz.
+
+Programación corregida: 07:00 y 17:00 Paraguay = 10:00 y 20:00 UTC (GitHub Actions puede retrasarse).
