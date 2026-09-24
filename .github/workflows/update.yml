@@ -1,6 +1,6 @@
 name: GOLES HOY - Actualizar pronosticos
 on:
-schedule:
+  schedule:
     - cron: '0 10,20 * * *'
   workflow_dispatch:
    
