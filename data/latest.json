@@ -1,1 +1,7 @@
-{"fecha":null,"actualizado":null,"fuente":"Pendiente de primera actualización","partidos":[],"advertencia":"Ejecutar workflow de actualización"}
+{
+  "fecha": null,
+  "actualizado": null,
+  "fuente": "Pendiente de primera actualización",
+  "partidos": [],
+  "advertencia": "Ejecutar workflow de actualización"
+}
