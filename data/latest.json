@@ -1,7 +1,12 @@
 {
-  "fecha": null,
-  "actualizado": null,
-  "fuente": "Pendiente de primera actualización",
+  "fecha": "2026-09-24",
+  "actualizado": "2026-09-24T14:10:15.621247-03:00",
+  "zona": "America/Asuncion",
+  "fuente": "TheSportsDB (parcial) + Sportmonks",
+  "mercado": "Más de 2.5 goles",
   "partidos": [],
-  "advertencia": "Ejecutar workflow de actualización"
+  "cartelera": [],
+  "analizados": 1,
+  "advertencia": "Sin pronósticos verificados: la cartelera disponible no aporta por sí sola cuotas e historial suficientes. Para generar selecciones se necesita análisis y cuotas verificables; la cartelera sola no permite calcular probabilidades.",
+  "consultas": 1
 }

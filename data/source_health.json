@@ -1,7 +1,13 @@
 {
-  "consultado": "2026-09-24T10:53:46.318439-03:00",
-  "fuente": "TheSportsDB",
+  "consultado": "2026-09-24T14:10:15.621247-03:00",
+  "fuente": "TheSportsDB + fuentes complementarias",
   "eventos_muestra": 1,
-  "estado": "solo respaldo; cobertura parcial; sin cuotas verificadas",
-  "pronosticos_nuevos": 0
+  "sportmonks_eventos": 0,
+  "sportmonks_estado": "Sportmonks",
+  "fuentes_complementarias": [
+    "Sportmonks"
+  ],
+  "estado": "cobertura según plan y fuentes",
+  "pronosticos_nuevos": 0,
+  "errores": []
 }
