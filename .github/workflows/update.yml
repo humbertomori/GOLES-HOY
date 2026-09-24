@@ -21,17 +21,13 @@ jobs:
         with:
           python-version: '3.12'
       - name: Ejecutar pruebas antes de actualizar
-        run: python -m unittest discover -s tests -v
-      - name: Consultar fuente disponible y calcular pronosticos
-          env:
-            SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS_API_TOKEN }}
-            API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
-            MAX_API_CALLS: '44'
-          run: python engine/update.py
-        
-          
-          
-        
+        run: python -m unittest discover -s tests -v   
+      - name: Consultar fuente y calcular pronosticos
+        env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS_API_TOKEN }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          MAX_API_CALLS: '44'
+        run: python engine/update.py
       - name: Publicar datos sin exponer API key
         run: |
           git config user.name 'github-actions[bot]'
