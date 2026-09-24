@@ -1,7 +1,9 @@
 {
-  "consultado": "2026-09-24T10:53:46.318439-03:00",
-  "fuente": "TheSportsDB",
+  "consultado": "2026-09-24T11:44:15.126547-03:00",
+  "fuente": "TheSportsDB + fuentes complementarias",
   "eventos_muestra": 1,
-  "estado": "solo respaldo; cobertura parcial; sin cuotas verificadas",
-  "pronosticos_nuevos": 0
+  "fuentes_complementarias": [],
+  "estado": "cobertura parcial",
+  "pronosticos_nuevos": 0,
+  "errores": []
 }
