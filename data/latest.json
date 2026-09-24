@@ -1,11 +1,7 @@
 {
-  "fecha": "2026-09-24",
-  "actualizado": "2026-09-24T11:29:27.746893-03:00",
-  "zona": "America/Asuncion",
-  "fuente": "TheSportsDB (cartelera parcial)",
-  "mercado": "Más de 2.5 goles",
+  "fecha": null,
+  "actualizado": null,
+  "fuente": "Pendiente de primera actualización",
   "partidos": [],
-  "analizados": 1,
-  "advertencia": "Sin pronósticos verificados: la API gratuita ofrece cartelera parcial, no cuotas ni historial suficientes. Para generar selecciones se necesita una fuente autorizada de análisis y cuotas.",
-  "consultas": 1
+  "advertencia": "Ejecutar workflow de actualización"
 }

@@ -67,6 +67,56 @@ def fetch_schedule(today):
  raw=fetch_json(url)
  return [e for e in (raw.get('events') or []) if e.get('strSport')=='Soccer' and league_priority((e.get('strLeague') or '')+' '+(e.get('strEvent') or ''))>=0]
 
+def external_fixtures(today):
+ """Owner-provided exports from sources with permission; no scraping or fabricated data.
+ data/fixture_sources.json: {fecha, fuentes:[{nombre, partidos:[{id,hora,liga,pais,local,visitante}]}]}.
+ """
+ path=DATA/'fixture_sources.json'
+ if not path.exists():return [],[]
+ raw=json.loads(path.read_text(encoding='utf8'))
+ if raw.get('fecha')!=today:return [],[]
+ fixtures=[];sources=[]
+ for source in raw.get('fuentes',[]):
+  name=str(source.get('nombre','')).strip()
+  if not name or not isinstance(source.get('partidos'),list):continue
+  sources.append(name)
+  for item in source['partidos']:
+   try:
+    start=datetime.datetime.fromisoformat(str(item['hora']).replace('Z','+00:00'))
+    if start.tzinfo is None or start.astimezone(TZ).date().isoformat()!=today:continue
+    home=str(item['local']).strip();away=str(item['visitante']).strip()
+    if not home or not away:continue
+    league=str(item.get('liga') or 'Liga sin indicar')
+    if league_priority(league)<0:continue
+    fixtures.append({'idEvent':str(item.get('id') or home+'-'+away+'-'+start.isoformat()),
+     'strTimestamp':start.isoformat(),'strHomeTeam':home,'strAwayTeam':away,
+     'strLeague':league,'strCountry':str(item.get('pais') or 'País sin indicar'),
+     '_source':name})
+   except (KeyError,TypeError,ValueError):continue
+ return fixtures,sources
+
+def fixture_key(row):
+ """Deduplicate same matchup/time across feeds without merging different games."""
+ import unicodedata,re
+ def norm(v):
+  s=unicodedata.normalize('NFKD',str(v or '')).encode('ascii','ignore').decode().lower()
+  return re.sub(r'[^a-z0-9]','',s)
+ try:
+  dt=datetime.datetime.fromisoformat(str(row['strTimestamp']).replace('Z','+00:00'))
+  return (norm(row['strHomeTeam']),norm(row['strAwayTeam']),dt.astimezone(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M'))
+ except (KeyError,ValueError,TypeError):return ('invalid',str(row.get('idEvent')))
+
+def combine_fixtures(*feeds):
+ combined={}
+ for feed in feeds:
+  for row in feed:
+   key=fixture_key(row)
+   if key not in combined:combined[key]=dict(row)
+   elif row.get('_source'):
+    old=combined[key]
+    old['_source']=', '.join(dict.fromkeys(filter(None,[old.get('_source'),row['_source']])))
+ return list(combined.values())
+
 def validated_feed(today):
  """Optional owner-supplied, licensed analysis feed. No guessed odds/probabilities.
  Format: data/authorized_analysis.json {fecha, partidos:[{id,hora,liga,pais,local,visitante,
@@ -98,11 +148,32 @@ def validated_feed(today):
  for row in picks:row.pop('_edge')
  return picks[:10]
 
+def visible_schedule(events, now):
+ """Real upcoming fixtures, clearly separate from verified predictions."""
+ fixtures=[];seen=set()
+ for e in events:
+  try:
+   start=datetime.datetime.fromisoformat(str(e['strTimestamp']).replace('Z','+00:00'))
+   if start.tzinfo is None or start.astimezone(TZ)<=now:continue
+   if start.astimezone(TZ).date()!=now.date():continue
+   home=str(e['strHomeTeam']).strip();away=str(e['strAwayTeam']).strip()
+   if not home or not away:continue
+   id_=str(e.get('idEvent') or home+'-'+away)
+   if id_ in seen:continue
+   seen.add(id_)
+   fixtures.append({'id':id_,'hora':start.isoformat(),'liga':e.get('strLeague') or 'Liga sin indicar',
+     'pais':e.get('strCountry') or 'País sin indicar','local':home,'visitante':away})
+  except (KeyError,TypeError,ValueError):continue
+ return sorted(fixtures,key=lambda x:x['hora'])
+
 def run():
  now=datetime.datetime.now(TZ);today=now.date().isoformat()
- errors=[];events=[]
+ errors=[];events=[];external=[];source_names=[]
+ try:external,source_names=external_fixtures(today)
+ except (ValueError,OSError,TypeError) as exc:errors.append('Fuentes complementarias: '+str(exc))
  try:events=fetch_schedule(today)
  except (urllib.error.URLError,TimeoutError,ValueError,OSError) as exc:errors.append('TheSportsDB: '+str(exc))
+ events=combine_fixtures(events,external)
  try:picks=validated_feed(today)
  except (ValueError,OSError) as exc:picks=[];errors.append('Fuente autorizada: '+str(exc))
  previous=load_history();indexed={(str(x.get('fecha')),str(x.get('id'))):x for x in previous}
@@ -110,17 +181,17 @@ def run():
  # Free day schedule does not supply comprehensive final scores. Never mark a result guessed.
  history=sorted(indexed.values(),key=lambda x:(x.get('fecha',''),x.get('hora','')),reverse=True)[:2000]
  warning=('Sin pronósticos verificados: la API gratuita ofrece cartelera parcial, no cuotas ni historial suficientes. '
-          'Para generar selecciones se necesita una fuente autorizada de análisis y cuotas.' if not picks else
+          'Para generar selecciones se necesita análisis y cuotas verificables; la cartelera sola no permite calcular probabilidades.' if not picks else
           'Pronósticos de fuente autorizada; cobertura sujeta a disponibilidad.')
  if errors:warning+=' Fallos de fuentes: '+'; '.join(errors)
  out={'fecha':today,'actualizado':now.isoformat(),'zona':'America/Asuncion',
-      'fuente':'Fuente autorizada + TheSportsDB (cartelera parcial)' if picks else 'TheSportsDB (cartelera parcial)',
-      'mercado':'Más de 2.5 goles','partidos':picks,'analizados':len(events),
+      'fuente':('TheSportsDB (parcial)' + (' + '+', '.join(source_names) if source_names else '') + (' + análisis autorizado' if picks else '')),
+      'mercado':'Más de 2.5 goles','partidos':picks,'cartelera':visible_schedule(events,now),'analizados':len(events),
       'advertencia':warning,'consultas':int(not errors)}
  # Always publish a CURRENT status, including when a source is unavailable.
  # Never re-display yesterday's predictions as current.
- atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'TheSportsDB',
-  'eventos_muestra':len(events),'estado':'error' if errors else 'cobertura parcial',
+ atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'TheSportsDB + fuentes complementarias',
+  'eventos_muestra':len(events),'fuentes_complementarias':source_names,'estado':'error' if errors else 'cobertura parcial',
   'pronosticos_nuevos':len(picks),'errores':errors})
  atomic_write('history.json',{'partidos':history})
  atomic_write('latest.json',out)

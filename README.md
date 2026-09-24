@@ -18,3 +18,33 @@ TheSportsDB gratuito limita `eventsday` a **3 eventos** y no proporciona datos s
 4. La compilación APK está configurada en `.github/workflows/android.yml`, pero **esta entrega no ha sido compilada en GitHub**.
 
 La programación usa 10:00 y 20:00 UTC = 07:00 y 17:00 en Paraguay; GitHub puede retrasar ejecuciones. No se garantiza ejecución al minuto.
+
+
+## Alcance de esta revisión
+La aplicación separa la cartelera parcial de TheSportsDB de los pronósticos verificados.
+Los partidos mostrados en «Cartelera disponible» NO son selecciones +2.5 ni BTTS.
+La API gratuita de TheSportsDB limita el calendario diario y no proporciona una
+cartelera completa de Apostala ni las cuotas necesarias para calcular el Top 10.
+El workflow se programa a las 08:00 Paraguay (11:00 UTC), sujeto a demoras de GitHub.
+
+## Fuentes múltiples: alcance verificado
+
+El motor combina TheSportsDB (cartelera parcial) con `data/fixture_sources.json`,
+una **exportación aportada por el propietario con permiso de uso**. No extrae
+automáticamente datos de Sofascore ni de Apostala: no se ha verificado una API
+pública autorizada para esos servicios. Los diarios pueden aportar contexto,
+pero sus noticias no equivalen a estadísticas ni cuotas. No inventar encuentros.
+
+Formato opcional de `data/fixture_sources.json` (no se incluye un archivo con
+partidos de ejemplo en producción):
+
+```json
+{"fecha":"AAAA-MM-DD","fuentes":[{"nombre":"Apostala (exportación autorizada)","partidos":[{"id":"ID_REAL","hora":"2026-09-24T18:00:00-03:00","liga":"Liga real","pais":"PY","local":"Equipo A","visitante":"Equipo B"}]}]}
+```
+
+Las fuentes se deduplican por local, visitante y hora UTC; la cartelera nunca
+se presenta como pronóstico. Para publicar selecciones, el archivo opcional
+`data/authorized_analysis.json` requiere probabilidades y cuotas fundamentadas.
+No se prometen diez pronósticos si faltan datos. La automatización de GitHub
+publica solo archivos ya accesibles en el repositorio: no puede leer un archivo
+que permanezca exclusivamente en el celular.
