@@ -1,6 +1,6 @@
 {
   "fecha": "2026-09-25",
-  "actualizado": "2026-09-25T08:18:16.793404-03:00",
+  "actualizado": "2026-09-25T17:03:04.618121-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -75,60 +75,6 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401883200",
-      "hora": "15:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Girona",
-      "visitante": "Albacete",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401875920",
-      "hora": "16:00",
-      "liga": "Eerste Divisie",
-      "pais": "Netherlands",
-      "local": "FC Dordrecht",
-      "visitante": "Almere City",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878561",
-      "hora": "15:45",
-      "liga": "Championship",
-      "pais": "Scotland",
-      "local": "Arbroath",
-      "visitante": "Queen's Park",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878560",
-      "hora": "15:45",
-      "liga": "Championship",
-      "pais": "Scotland",
-      "local": "Ayr United",
-      "visitante": "Stenhousemuir",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878558",
-      "hora": "15:45",
-      "liga": "Championship",
-      "pais": "Scotland",
-      "local": "Inverness Caledonian Thistle",
-      "visitante": "Greenock Morton",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878557",
-      "hora": "15:45",
-      "liga": "Championship",
-      "pais": "Scotland",
-      "local": "Raith Rovers",
-      "visitante": "Livingston",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401860355",
       "hora": "19:30",
       "liga": "Serie B",
@@ -144,15 +90,6 @@
       "pais": "Brazil",
       "local": "Vila Nova",
       "visitante": "Londrina",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401888591",
-      "hora": "16:30",
-      "liga": "Division Profesional",
-      "pais": "Paraguay",
-      "local": "Sportivo Luqueño",
-      "visitante": "Guaraní",
       "fuente": "ESPN"
     },
     {
@@ -180,87 +117,6 @@
       "pais": "Colombia",
       "local": "Once Caldas",
       "visitante": "Atlético Bucaramanga",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861050",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Armenia",
-      "visitante": "Latvia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861049",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Georgia",
-      "visitante": "Northern Ireland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861054",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Hungary",
-      "visitante": "Ukraine",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861052",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Italy",
-      "visitante": "Belgium",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861056",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Montenegro",
-      "visitante": "Cyprus",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861055",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Poland",
-      "visitante": "Bosnia-Herzegovina",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861051",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Sweden",
-      "visitante": "Romania",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861053",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Türkiye",
-      "visitante": "France",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900630",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Bermuda",
-      "visitante": "Guadeloupe",
       "fuente": "ESPN"
     },
     {
@@ -306,132 +162,6 @@
       "pais": "CONCACAF",
       "local": "Honduras",
       "visitante": "Suriname",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920048",
-      "hora": "10:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Mozambique",
-      "visitante": "Senegal",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920041",
-      "hora": "10:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Sudan",
-      "visitante": "Ethiopia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920049",
-      "hora": "10:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Tanzania",
-      "visitante": "Guinea-Bissau",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920043",
-      "hora": "12:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Niger",
-      "visitante": "Lesotho",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920045",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Gambia",
-      "visitante": "Somalia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920042",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Malawi",
-      "visitante": "South Sudan",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920047",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Nigeria",
-      "visitante": "Madagascar",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920046",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Rwanda",
-      "visitante": "Liberia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920044",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Togo",
-      "visitante": "Burundi",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920040",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Algeria",
-      "visitante": "Zambia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920037",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Burkina Faso",
-      "visitante": "Benin",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920038",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Egypt",
-      "visitante": "Angola",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920039",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Mali",
-      "visitante": "Cape Verde",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920036",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Morocco",
-      "visitante": "Gabon",
       "fuente": "ESPN"
     },
     {
