@@ -61,6 +61,31 @@ def fetch_json(url, timeout=12):
  with urllib.request.urlopen(req,timeout=timeout) as res:
   return json.load(res)
 
+ESPN_LEAGUES = {
+ # Europe first divisions / strong second divisions
+ 'eng.1':('Premier League','England'),'eng.2':('Championship','England'),
+ 'esp.1':('LaLiga','Spain'),'esp.2':('LaLiga 2','Spain'),
+ 'ger.1':('Bundesliga','Germany'),'ger.2':('2. Bundesliga','Germany'),
+ 'ita.1':('Serie A','Italy'),'ita.2':('Serie B','Italy'),
+ 'fra.1':('Ligue 1','France'),'fra.2':('Ligue 2','France'),
+ 'ned.1':('Eredivisie','Netherlands'),'ned.2':('Eerste Divisie','Netherlands'),
+ 'por.1':('Primeira Liga','Portugal'),'sco.1':('Premiership','Scotland'),'sco.2':('Championship','Scotland'),
+ 'bel.1':('First Division A','Belgium'),'tur.1':('Super Lig','Turkey'),'gre.1':('Super League','Greece'),
+ 'den.1':('Superliga','Denmark'),'nor.1':('Eliteserien','Norway'),'swe.1':('Allsvenskan','Sweden'),
+ # Americas
+ 'usa.1':('MLS','USA'),'bra.1':('Serie A','Brazil'),'bra.2':('Serie B','Brazil'),
+ 'arg.1':('Primera Division','Argentina'),'par.1':('Division Profesional','Paraguay'),
+ 'col.1':('Primera A','Colombia'),'uru.1':('Primera Division','Uruguay'),'chi.1':('Primera Division','Chile'),
+ # international / continental
+ 'uefa.champions':('Champions League','Europe'),'uefa.europa':('Europa League','Europe'),
+ 'uefa.europa.conf':('Conference League','Europe'),'uefa.nations':('UEFA Nations League','Europe'),
+ 'conmebol.libertadores':('Copa Libertadores','South America'),'conmebol.sudamericana':('Copa Sudamericana','South America'),
+ 'concacaf.nations.league':('CONCACAF Nations League','CONCACAF'),'caf.nations_qual':('Africa Cup of Nations Qualifying','Africa'),
+ 'rsa.1':('Premiership','South Africa'),'per.1':('Liga 1','Peru'),'bol.1':('Liga Profesional','Bolivia'),'ecu.1':('LigaPro','Ecuador'),
+ 'irl.1':('Premier Division','Ireland'),'aut.1':('Bundesliga','Austria'),'mex.1':('Liga MX','Mexico'),
+ 'fifa.friendly':('International Friendly','International'),
+}
+
 OPENFOOTBALL_DATASETS = {
  'Premier League':'en.1.json','Championship':'en.2.json','League One':'en.3.json','League Two':'en.4.json',
  'Bundesliga':'de.1.json','2. Bundesliga':'de.2.json','3. Liga':'de.3.json',
@@ -79,9 +104,8 @@ def _team_stats(matches, team, before):
   ft=(m.get('score') or {}).get('ft')
   if not isinstance(ft,list) or len(ft)!=2: continue
   if team not in (m.get('team1'),m.get('team2')): continue
-  try:
-   a,b=float(ft[0]),float(ft[1])
-  except (TypeError,ValueError): continue
+  try:a,b=float(ft[0]),float(ft[1])
+  except (TypeError,ValueError):continue
   gf,ga=(a,b) if m.get('team1')==team else (b,a)
   rows.append((str(m.get('date','')),gf,ga))
  rows.sort(reverse=True)
@@ -94,35 +118,114 @@ def _probabilities(home_rows, away_rows):
  p_poisson=poisson_over25(avg_total)
  p_over=sum((gf+ga)>2.5 for _,gf,ga in rows)/len(rows)
  p_btts=sum(gf>0 and ga>0 for _,gf,ga in rows)/len(rows)
- # transparent empirical/Poisson blend; data completeness penalizes small samples
  completeness=min(1.0,len(rows)/16)
  over=(0.55*p_over+0.45*p_poisson)*(0.92+0.08*completeness)
  btts=p_btts*(0.92+0.08*completeness)
  return round(over*100,1),round(btts*100,1),len(rows)
 
-def fetch_schedule(today):
- """OpenFootball public-domain JSON. No key, subscription or private token."""
- season=_season_for(today); fixtures=[]; analyses=[]; errors=[]
+def _espn_competitors(event):
+ try:comps=event['competitions'][0]['competitors']
+ except (KeyError,IndexError,TypeError):return None
+ out={}
+ for c in comps:
+  side=c.get('homeAway')
+  team=c.get('team') or {}
+  if side in ('home','away') and team.get('displayName'):
+   out[side]={'id':str(team.get('id') or ''),'name':str(team['displayName']).strip()}
+ return out if 'home' in out and 'away' in out else None
+
+def _score_number(c):
+ v=c.get('score')
+ if isinstance(v,dict):v=v.get('value',v.get('displayValue'))
+ try:return float(v)
+ except (TypeError,ValueError):return None
+
+def _espn_recent(league, team_id, before_iso):
+ """Recent completed team matches from ESPN public site feed; no key/token."""
+ if not team_id:return []
+ url=f'https://site.api.espn.com/apis/site/v2/sports/soccer/{league}/teams/{team_id}/schedule'
+ raw=fetch_json(url,timeout=10);rows=[]
+ for ev in raw.get('events') or []:
+  if str(ev.get('date') or '')>=before_iso:continue
+  try:comp=ev['competitions'][0]
+  except (KeyError,IndexError,TypeError):continue
+  status=((comp.get('status') or {}).get('type') or {})
+  if not status.get('completed'):continue
+  mine=None;opp=None
+  for c in comp.get('competitors') or []:
+   if str((c.get('team') or {}).get('id') or '')==team_id:mine=c
+   else:opp=c
+  if not mine or not opp:continue
+  gf,ga=_score_number(mine),_score_number(opp)
+  if gf is None or ga is None:continue
+  rows.append((str(ev.get('date') or ''),gf,ga))
+ rows.sort(reverse=True)
+ return rows[:8]
+
+def fetch_espn(today):
+ """Primary daily fixture feed. ESPN site JSON requires no API key; failures are isolated per competition."""
+ ymd=today.replace('-','');fixtures=[];analyses=[];errors=[]
+ for slug,(fallback_name,country) in ESPN_LEAGUES.items():
+  url=f'https://site.api.espn.com/apis/site/v2/sports/soccer/{slug}/scoreboard?dates={ymd}'
+  try:raw=fetch_json(url,timeout=10)
+  except Exception as exc:
+   errors.append(f'ESPN {slug}: {type(exc).__name__}');continue
+  for ev in raw.get('events') or []:
+   teams=_espn_competitors(ev)
+   if not teams:continue
+   start=str(ev.get('date') or '')
+   try:
+    dt=datetime.datetime.fromisoformat(start.replace('Z','+00:00'))
+    if dt.astimezone(TZ).date().isoformat()!=today:continue
+   except ValueError:continue
+   league=((ev.get('league') or {}).get('name') or fallback_name)
+   if league_priority(league)<0:continue
+   ident='espn:'+str(ev.get('id') or slug+':'+teams['home']['name']+':'+teams['away']['name'])
+   fixtures.append({'idEvent':ident,'strDate':today,'strTimestamp':start,'strHomeTeam':teams['home']['name'],
+    'strAwayTeam':teams['away']['name'],'strLeague':league,'strCountry':country,'_source':'ESPN'})
+   # Do not guess. Analyze only when both teams have enough completed history.
+   try:
+    hr=_espn_recent(slug,teams['home']['id'],start); ar=_espn_recent(slug,teams['away']['id'],start)
+    probs=_probabilities(hr,ar)
+   except Exception as exc:
+    errors.append(f'ESPN historial {slug}: {type(exc).__name__}');probs=None
+   if probs:
+    po,pb,n=probs
+    analyses.append({'id':ident,'hora':start,'liga':league,'pais':country,'local':teams['home']['name'],
+     'visitante':teams['away']['name'],'prob_mas_2_5':po,'prob_btts':pb,'muestra':n,'fuente':'ESPN'})
+ return fixtures,analyses,errors
+
+def fetch_openfootball(today):
+ """Fallback fixture/history source. Public-domain JSON, no key."""
+ season=_season_for(today);fixtures=[];analyses=[];errors=[]
  base=f'https://raw.githubusercontent.com/openfootball/football.json/master/{season}/'
  for league,filename in OPENFOOTBALL_DATASETS.items():
-  try: raw=fetch_json(base+filename)
-  except Exception as exc:
-   errors.append(f'{league}: {exc}');continue
+  try:raw=fetch_json(base+filename)
+  except Exception as exc:errors.append(f'OpenFootball {league}: {type(exc).__name__}');continue
   matches=raw.get('matches') or []
   for m in matches:
    if str(m.get('date',''))!=today:continue
    home=str(m.get('team1') or '').strip();away=str(m.get('team2') or '').strip()
    if not home or not away:continue
    ident=f'openfootball:{filename}:{today}:{home}:{away}'
-   item={'idEvent':ident,'strDate':today,'strTimestamp':None,'strHomeTeam':home,'strAwayTeam':away,
-         'strLeague':league,'strCountry':'','_source':'OpenFootball'}
-   fixtures.append(item)
+   fixtures.append({'idEvent':ident,'strDate':today,'strTimestamp':None,'strHomeTeam':home,'strAwayTeam':away,
+    'strLeague':league,'strCountry':'','_source':'OpenFootball'})
    probs=_probabilities(_team_stats(matches,home,today),_team_stats(matches,away,today))
    if probs:
     po,pb,n=probs
-    analyses.append({'id':ident,'hora':m.get('time') or 'Horario no disponible','liga':league,'pais':'',
-      'local':home,'visitante':away,'prob_mas_2_5':po,'prob_btts':pb,'muestra':n,'fuente':'OpenFootball'})
+    analyses.append({'id':ident,'hora':today+'T12:00:00-03:00','liga':league,'pais':'','local':home,'visitante':away,
+     'prob_mas_2_5':po,'prob_btts':pb,'muestra':n,'fuente':'OpenFootball'})
  return fixtures,analyses,errors
+
+def fetch_schedule(today):
+ """Compatibility wrapper: ESPN primary + OpenFootball fallback, both without paid API/key."""
+ ef,ea,ee=fetch_espn(today)
+ of,oa,oe=fetch_openfootball(today)
+ fixtures=combine_fixtures(ef,of)
+ # Prefer ESPN analyses; OpenFootball fills competitions ESPN did not analyze.
+ seen={(x['local'].lower(),x['visitante'].lower()) for x in ea}
+ analyses=ea+[x for x in oa if (x['local'].lower(),x['visitante'].lower()) not in seen]
+ return fixtures,analyses,ee+oe
 
 def external_fixtures(today):
  """Owner-provided exports from sources with permission; no scraping or fabricated data.
@@ -235,7 +338,7 @@ def visible_schedule(events, now):
 def run():
  now=datetime.datetime.now(TZ);today=now.date().isoformat();errors=[]
  try:events,analyses,source_errors=fetch_schedule(today);errors.extend(source_errors)
- except Exception as exc:events=[];analyses=[];errors.append('OpenFootball: '+str(exc))
+ except Exception as exc:events=[];analyses=[];errors.append('Fuentes automáticas: '+str(exc))
  try:external,source_names=external_fixtures(today)
  except Exception as exc:external=[];source_names=[];errors.append('Fuentes complementarias: '+str(exc))
  events=combine_fixtures(events,external)
@@ -257,14 +360,14 @@ def run():
   picks.append(x);by_league[lg]=by_league.get(lg,0)+1
   if ct:by_country[ct]=by_country.get(ct,0)+1
   if len(picks)>=10:break
- warning=('Análisis automático calculado con resultados históricos públicos de OpenFootball. '
+ warning=('Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. '
           'Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran.')
  if not events: warning+=' No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy.'
  if errors: warning+=' Incidencias de fuentes: '+'; '.join(errors[:5])
- out={'fecha':today,'actualizado':now.isoformat(),'zona':'America/Asuncion','fuente':'OpenFootball + respaldos públicos compatibles',
+ out={'fecha':today,'actualizado':now.isoformat(),'zona':'America/Asuncion','fuente':'ESPN + OpenFootball (respaldo)',
       'mercados':['Más de 2.5 goles','Ambos marcan'],'partidos':picks,'cartelera':visible_schedule(events,now),
       'recibidos':len(events),'analizados':len(analyses),'seleccionados':len(picks),'advertencia':warning}
- atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'OpenFootball','recibidos':len(events),
+ atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'ESPN + OpenFootball','recibidos':len(events),
   'analizados':len(analyses),'seleccionados':len(picks),'estado':'error' if not events and errors else ('sin partidos cubiertos' if not events else 'ok'),
   'errores':errors[:20]})
  atomic_write('latest.json',out)
