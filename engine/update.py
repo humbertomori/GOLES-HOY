@@ -61,59 +61,68 @@ def fetch_json(url, timeout=12):
  with urllib.request.urlopen(req,timeout=timeout) as res:
   return json.load(res)
 
-def fetch_schedule(today):
- """Public TheSportsDB free API is a partial schedule, NOT full match coverage."""
- url='https://www.thesportsdb.com/api/v1/json/123/eventsday.php?'+urllib.parse.urlencode({'d':today,'s':'Soccer'})
- raw=fetch_json(url)
- return [e for e in (raw.get('events') or []) if e.get('strSport')=='Soccer' and league_priority((e.get('strLeague') or '')+' '+(e.get('strEvent') or ''))>=0]
+OPENFOOTBALL_DATASETS = {
+ 'Premier League':'en.1.json','Championship':'en.2.json','League One':'en.3.json','League Two':'en.4.json',
+ 'Bundesliga':'de.1.json','2. Bundesliga':'de.2.json','3. Liga':'de.3.json',
+ 'La Liga':'es.1.json','Segunda División':'es.2.json','Serie A':'it.1.json','Serie B':'it.2.json',
+ 'Ligue 1':'fr.1.json','Ligue 2':'fr.2.json','Eredivisie':'nl.1.json','Primeira Liga':'pt.1.json',
+}
 
-def sportmonks_rows(payload, today):
- """Normalize actual Sportmonks v3 fixtures; never manufacture names or times."""
- result=[]
- for item in payload.get('data') or []:
-  if not isinstance(item,dict) or item.get('placeholder'):continue
-  try:
-   start=datetime.datetime.fromisoformat(str(item['starting_at']).replace('Z','+00:00'))
-   # Sportmonks documents starting_at as UTC; don't interpret it as Paraguay time.
-   if start.tzinfo is None:start=start.replace(tzinfo=datetime.timezone.utc)
-   if start.astimezone(TZ).date().isoformat()!=today:continue
-   participants=item.get('participants') or []
-   home=next((p.get('name') for p in participants if p.get('meta',{}).get('location')=='home'),None)
-   away=next((p.get('name') for p in participants if p.get('meta',{}).get('location')=='away'),None)
-   if not home or not away:continue
-   league=item.get('league') or {}
-   league_name=league.get('name') or 'Liga sin indicar'
-   if league_priority(league_name)<0:continue
-   result.append({'idEvent':'sportmonks:'+str(item['id']),'strTimestamp':start.isoformat(),
-    'strHomeTeam':home,'strAwayTeam':away,'strLeague':league_name,
-    'strCountry':(league.get('country') or {}).get('name','País sin indicar') if isinstance(league.get('country'),dict) else 'País sin indicar',
-    '_source':'Sportmonks'})
-  except (KeyError,ValueError,TypeError,AttributeError):continue
- return result
+def _season_for(day):
+ d=datetime.date.fromisoformat(day)
+ return f'{d.year}-{str(d.year+1)[-2:]}' if d.month>=7 else f'{d.year-1}-{str(d.year)[-2:]}'
 
-def fetch_sportmonks(today,token=None):
- """Live, documented Sportmonks v3 date endpoint, with pagination.
-
- A local day in Paraguay overlaps two UTC dates, so query both; the
- normalizer filters the returned fixtures back to the correct local date.
- """
- token=token or os.getenv('SPORTMONKS_API_TOKEN','').strip()
- if not token:return [],'Sportmonks sin configurar: falta SPORTMONKS_API_TOKEN'
- utc_start=datetime.datetime.combine(datetime.date.fromisoformat(today),datetime.time(),TZ).astimezone(datetime.timezone.utc)
- dates=[utc_start.date(),(utc_start+datetime.timedelta(days=1)).date()]
+def _team_stats(matches, team, before):
  rows=[]
- for date in dict.fromkeys(dates):
-  for page in range(1,11):
-   params=urllib.parse.urlencode({'api_token':token,'include':'participants;league','per_page':50,'page':page})
-   url=f'https://api.sportmonks.com/v3/football/fixtures/date/{date.isoformat()}?{params}'
-   try:payload=fetch_json(url)
-   except urllib.error.HTTPError as exc:
-    raise RuntimeError(f'Sportmonks HTTP {exc.code} (comprobar token, plan o límite)') from None
-   rows.extend(sportmonks_rows(payload,today))
-   pagination=payload.get('pagination') or {}
-   if not pagination.get('has_more',False):break
-  else:raise RuntimeError('Sportmonks: más de 10 páginas; consulta incompleta')
- return combine_fixtures(rows),'Sportmonks'
+ for m in matches:
+  if str(m.get('date',''))>=before: continue
+  ft=(m.get('score') or {}).get('ft')
+  if not isinstance(ft,list) or len(ft)!=2: continue
+  if team not in (m.get('team1'),m.get('team2')): continue
+  try:
+   a,b=float(ft[0]),float(ft[1])
+  except (TypeError,ValueError): continue
+  gf,ga=(a,b) if m.get('team1')==team else (b,a)
+  rows.append((str(m.get('date','')),gf,ga))
+ rows.sort(reverse=True)
+ return rows[:8]
+
+def _probabilities(home_rows, away_rows):
+ if len(home_rows)<4 or len(away_rows)<4:return None
+ rows=home_rows+away_rows
+ avg_total=sum(gf+ga for _,gf,ga in rows)/len(rows)
+ p_poisson=poisson_over25(avg_total)
+ p_over=sum((gf+ga)>2.5 for _,gf,ga in rows)/len(rows)
+ p_btts=sum(gf>0 and ga>0 for _,gf,ga in rows)/len(rows)
+ # transparent empirical/Poisson blend; data completeness penalizes small samples
+ completeness=min(1.0,len(rows)/16)
+ over=(0.55*p_over+0.45*p_poisson)*(0.92+0.08*completeness)
+ btts=p_btts*(0.92+0.08*completeness)
+ return round(over*100,1),round(btts*100,1),len(rows)
+
+def fetch_schedule(today):
+ """OpenFootball public-domain JSON. No key, subscription or private token."""
+ season=_season_for(today); fixtures=[]; analyses=[]; errors=[]
+ base=f'https://raw.githubusercontent.com/openfootball/football.json/master/{season}/'
+ for league,filename in OPENFOOTBALL_DATASETS.items():
+  try: raw=fetch_json(base+filename)
+  except Exception as exc:
+   errors.append(f'{league}: {exc}');continue
+  matches=raw.get('matches') or []
+  for m in matches:
+   if str(m.get('date',''))!=today:continue
+   home=str(m.get('team1') or '').strip();away=str(m.get('team2') or '').strip()
+   if not home or not away:continue
+   ident=f'openfootball:{filename}:{today}:{home}:{away}'
+   item={'idEvent':ident,'strDate':today,'strTimestamp':None,'strHomeTeam':home,'strAwayTeam':away,
+         'strLeague':league,'strCountry':'','_source':'OpenFootball'}
+   fixtures.append(item)
+   probs=_probabilities(_team_stats(matches,home,today),_team_stats(matches,away,today))
+   if probs:
+    po,pb,n=probs
+    analyses.append({'id':ident,'hora':m.get('time') or 'Horario no disponible','liga':league,'pais':'',
+      'local':home,'visitante':away,'prob_mas_2_5':po,'prob_btts':pb,'muestra':n,'fuente':'OpenFootball'})
+ return fixtures,analyses,errors
 
 def external_fixtures(today):
  """Owner-provided exports from sources with permission; no scraping or fabricated data.
@@ -197,58 +206,70 @@ def validated_feed(today):
  return picks[:10]
 
 def visible_schedule(events, now):
- """Real upcoming fixtures, clearly separate from verified predictions."""
  fixtures=[];seen=set()
  for e in events:
   try:
-   start=datetime.datetime.fromisoformat(str(e['strTimestamp']).replace('Z','+00:00'))
-   if start.tzinfo is None or start.astimezone(TZ)<=now:continue
-   if start.astimezone(TZ).date()!=now.date():continue
+   date=str(e.get('strDate') or '')
+   ts=e.get('strTimestamp')
+   if ts:
+    start=datetime.datetime.fromisoformat(str(ts).replace('Z','+00:00'))
+    if start.tzinfo:
+     local=start.astimezone(TZ)
+     if local.date()!=now.date() or local<=now:continue
+     hour=local.strftime('%H:%M')
+    else:
+     if start.date()!=now.date() or start<=now.replace(tzinfo=None):continue
+     hour=start.strftime('%H:%M')
+   else:
+    if date!=now.date().isoformat():continue
+    hour='Horario no disponible'
    home=str(e['strHomeTeam']).strip();away=str(e['strAwayTeam']).strip()
-   if not home or not away:continue
    id_=str(e.get('idEvent') or home+'-'+away)
-   if id_ in seen:continue
+   if not home or not away or id_ in seen:continue
    seen.add(id_)
-   fixtures.append({'id':id_,'hora':start.isoformat(),'liga':e.get('strLeague') or 'Liga sin indicar',
-     'pais':e.get('strCountry') or 'País sin indicar','local':home,'visitante':away})
+   fixtures.append({'id':id_,'hora':hour,'liga':e.get('strLeague') or 'Liga sin indicar',
+    'pais':e.get('strCountry') or '','local':home,'visitante':away,'fuente':e.get('_source','OpenFootball')})
   except (KeyError,TypeError,ValueError):continue
- return sorted(fixtures,key=lambda x:x['hora'])
+ return fixtures
 
 def run():
- now=datetime.datetime.now(TZ);today=now.date().isoformat()
- errors=[];events=[];external=[];source_names=[];sportmonks=[]
+ now=datetime.datetime.now(TZ);today=now.date().isoformat();errors=[]
+ try:events,analyses,source_errors=fetch_schedule(today);errors.extend(source_errors)
+ except Exception as exc:events=[];analyses=[];errors.append('OpenFootball: '+str(exc))
  try:external,source_names=external_fixtures(today)
- except (ValueError,OSError,TypeError) as exc:errors.append('Fuentes complementarias: '+str(exc))
- try:events=fetch_schedule(today)
- except (urllib.error.URLError,TimeoutError,ValueError,OSError) as exc:errors.append('TheSportsDB: '+str(exc))
- try:sportmonks,sportmonks_status=fetch_sportmonks(today)
- except (urllib.error.URLError,TimeoutError,ValueError,OSError,RuntimeError) as exc:
-  sportmonks_status='Sportmonks: '+str(exc);errors.append(sportmonks_status)
- if sportmonks_status=='Sportmonks':source_names.append('Sportmonks')
- events=combine_fixtures(sportmonks,events,external)
- try:picks=validated_feed(today)
- except (ValueError,OSError) as exc:picks=[];errors.append('Fuente autorizada: '+str(exc))
- previous=load_history();indexed={(str(x.get('fecha')),str(x.get('id'))):x for x in previous}
- for row in picks:indexed.setdefault((today,str(row['id'])),dict(row,fecha=today))
- # Free day schedule does not supply comprehensive final scores. Never mark a result guessed.
- history=sorted(indexed.values(),key=lambda x:(x.get('fecha',''),x.get('hora','')),reverse=True)[:2000]
- warning=('Sin pronósticos verificados: la cartelera disponible no aporta por sí sola cuotas e historial suficientes. '
-          'Para generar selecciones se necesita análisis y cuotas verificables; la cartelera sola no permite calcular probabilidades.' if not picks else
-          'Pronósticos de fuente autorizada; cobertura sujeta a disponibilidad.')
- if errors:warning+=' Fallos de fuentes: '+'; '.join(errors)
- out={'fecha':today,'actualizado':now.isoformat(),'zona':'America/Asuncion',
-      'fuente':('TheSportsDB (parcial)' + (' + '+', '.join(source_names) if source_names else '') + (' + análisis autorizado' if picks else '')),
-      'mercado':'Más de 2.5 goles','partidos':picks,'cartelera':visible_schedule(events,now),'analizados':len(events),
-      'advertencia':warning,'consultas':int(not errors)}
- # Always publish a CURRENT status, including when a source is unavailable.
- # Never re-display yesterday's predictions as current.
- atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'TheSportsDB + fuentes complementarias',
-  'eventos_muestra':len(events),'sportmonks_eventos':len(sportmonks),'sportmonks_estado':sportmonks_status,'fuentes_complementarias':source_names,'estado':'error' if errors else 'cobertura según plan y fuentes',
-  'pronosticos_nuevos':len(picks),'errores':errors})
- atomic_write('history.json',{'partidos':history})
+ except Exception as exc:external=[];source_names=[];errors.append('Fuentes complementarias: '+str(exc))
+ events=combine_fixtures(events,external)
+ # Automatic ranking: separate +2.5 and BTTS. Do not fill artificially.
+ candidates=[]
+ for r in analyses:
+  best=max(r['prob_mas_2_5'],r['prob_btts'])
+  if best<62:continue
+  market='Más de 2.5' if r['prob_mas_2_5']>=r['prob_btts'] else 'Ambos marcan'
+  prob=r['prob_mas_2_5'] if market=='Más de 2.5' else r['prob_btts']
+  x=dict(r,mercado=market,probabilidad=prob,estado='pendiente',resultado=None)
+  candidates.append(x)
+ candidates.sort(key=lambda x:(x['probabilidad'],x['muestra']),reverse=True)
+ # diversity caps: max 2 per competition, max 4 per country when country is known
+ picks=[];by_league={};by_country={}
+ for x in candidates:
+  lg=x['liga'];ct=x.get('pais') or ''
+  if by_league.get(lg,0)>=2 or (ct and by_country.get(ct,0)>=4):continue
+  picks.append(x);by_league[lg]=by_league.get(lg,0)+1
+  if ct:by_country[ct]=by_country.get(ct,0)+1
+  if len(picks)>=10:break
+ warning=('Análisis automático calculado con resultados históricos públicos de OpenFootball. '
+          'Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran.')
+ if not events: warning+=' No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy.'
+ if errors: warning+=' Incidencias de fuentes: '+'; '.join(errors[:5])
+ out={'fecha':today,'actualizado':now.isoformat(),'zona':'America/Asuncion','fuente':'OpenFootball + respaldos públicos compatibles',
+      'mercados':['Más de 2.5 goles','Ambos marcan'],'partidos':picks,'cartelera':visible_schedule(events,now),
+      'recibidos':len(events),'analizados':len(analyses),'seleccionados':len(picks),'advertencia':warning}
+ atomic_write('source_health.json',{'consultado':now.isoformat(),'fuente':'OpenFootball','recibidos':len(events),
+  'analizados':len(analyses),'seleccionados':len(picks),'estado':'error' if not events and errors else ('sin partidos cubiertos' if not events else 'ok'),
+  'errores':errors[:20]})
  atomic_write('latest.json',out)
- print('Actualización:',today,'eventos en muestra:',len(events),'pronósticos verificados:',len(picks),
-       'errores:',errors)
+ print('Actualización:',today,'recibidos:',len(events),'analizados:',len(analyses),'seleccionados:',len(picks))
+ return out
 
 def free_mode():
  """Legacy entry point for tests; use run() for production."""

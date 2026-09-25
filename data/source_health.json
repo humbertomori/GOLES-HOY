@@ -1,13 +1,8 @@
 {
-  "consultado": "2026-09-25T07:03:32.631883-03:00",
-  "fuente": "TheSportsDB + fuentes complementarias",
-  "eventos_muestra": 0,
-  "sportmonks_eventos": 0,
-  "sportmonks_estado": "Sportmonks",
-  "fuentes_complementarias": [
-    "Sportmonks"
-  ],
-  "estado": "cobertura según plan y fuentes",
-  "pronosticos_nuevos": 0,
+  "estado": "pendiente",
+  "fuente": "OpenFootball",
+  "recibidos": 0,
+  "analizados": 0,
+  "seleccionados": 0,
   "errores": []
 }

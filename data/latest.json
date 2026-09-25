@@ -1,12 +1,9 @@
 {
-  "fecha": "2026-09-25",
-  "actualizado": "2026-09-25T07:03:32.631883-03:00",
-  "zona": "America/Asuncion",
-  "fuente": "TheSportsDB (parcial) + Sportmonks",
-  "mercado": "Más de 2.5 goles",
+  "estado": "pendiente",
+  "fuente": "OpenFootball",
   "partidos": [],
   "cartelera": [],
+  "recibidos": 0,
   "analizados": 0,
-  "advertencia": "Sin pronósticos verificados: la cartelera disponible no aporta por sí sola cuotas e historial suficientes. Para generar selecciones se necesita análisis y cuotas verificables; la cartelera sola no permite calcular probabilidades.",
-  "consultas": 1
+  "seleccionados": 0
 }
