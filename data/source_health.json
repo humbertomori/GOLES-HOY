@@ -1,8 +1,17 @@
 {
-  "estado": "pendiente",
-  "fuente": "OpenFootball",
-  "recibidos": 0,
-  "analizados": 0,
-  "seleccionados": 0,
-  "errores": []
+  "consultado": "2026-09-25T08:18:16.793404-03:00",
+  "fuente": "ESPN + OpenFootball",
+  "recibidos": 41,
+  "analizados": 13,
+  "seleccionados": 4,
+  "estado": "ok",
+  "errores": [
+    "OpenFootball League One: HTTPError",
+    "OpenFootball League Two: HTTPError",
+    "OpenFootball 2. Bundesliga: HTTPError",
+    "OpenFootball 3. Liga: HTTPError",
+    "OpenFootball Segunda División: HTTPError",
+    "OpenFootball Serie B: HTTPError",
+    "OpenFootball Ligue 2: HTTPError"
+  ]
 }
