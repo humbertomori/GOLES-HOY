@@ -1,6 +1,6 @@
 {
   "fecha": "2026-09-27",
-  "actualizado": "2026-09-27T07:03:28.251718-03:00",
+  "actualizado": "2026-09-27T17:03:26.751213-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -75,84 +75,12 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401883197",
-      "hora": "09:00",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Real Valladolid",
-      "visitante": "Córdoba",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883164",
-      "hora": "11:15",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Mallorca",
-      "visitante": "Almería",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883202",
-      "hora": "13:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Burgos",
-      "visitante": "Eldense",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883201",
-      "hora": "13:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Eibar",
-      "visitante": "Las Palmas",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883198",
-      "hora": "16:00",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Real Oviedo",
-      "visitante": "Sporting Gijón",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401875913",
-      "hora": "09:30",
-      "liga": "Eerste Divisie",
-      "pais": "Netherlands",
-      "local": "De Graafschap",
-      "visitante": "FC Den Bosch",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:761844",
       "hora": "20:00",
       "liga": "MLS",
       "pais": "USA",
       "local": "Columbus Crew",
       "visitante": "Inter Miami CF",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401860358",
-      "hora": "11:00",
-      "liga": "Serie B",
-      "pais": "Brazil",
-      "local": "Criciúma",
-      "visitante": "Avaí",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401860359",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Brazil",
-      "local": "CRB",
-      "visitante": "Cuiabá",
       "fuente": "ESPN"
     },
     {
@@ -192,111 +120,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401923631",
-      "hora": "11:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Central Español Fútbol Club",
-      "visitante": "Liverpool",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401923661",
-      "hora": "15:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Juventud",
-      "visitante": "Cerro",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401923660",
       "hora": "18:00",
       "liga": "Primera Division",
       "pais": "Uruguay",
       "local": "Defensor Sporting",
       "visitante": "Danubio",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861067",
-      "hora": "10:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Lithuania",
-      "visitante": "Azerbaijan",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861071",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Austria",
-      "visitante": "Kosovo",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861070",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Denmark",
-      "visitante": "Wales",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861069",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Gibraltar",
-      "visitante": "Andorra",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861068",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Serbia",
-      "visitante": "Netherlands",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861074",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Germany",
-      "visitante": "Greece",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861072",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Israel",
-      "visitante": "Republic of Ireland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861073",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Norway",
-      "visitante": "Portugal",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900621",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Guyana",
-      "visitante": "Cayman Islands",
       "fuente": "ESPN"
     },
     {
@@ -333,15 +162,6 @@
       "pais": "CONCACAF",
       "local": "Trinidad and Tobago",
       "visitante": "Dominican Republic",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401876958",
-      "hora": "15:00",
-      "liga": "Liga MX",
-      "pais": "Mexico",
-      "local": "Pumas UNAM",
-      "visitante": "Atlético de San Luis",
       "fuente": "ESPN"
     },
     {
