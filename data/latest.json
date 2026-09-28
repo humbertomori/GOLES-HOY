@@ -1,6 +1,6 @@
 {
   "fecha": "2026-09-28",
-  "actualizado": "2026-09-28T07:05:16.684806-03:00",
+  "actualizado": "2026-09-28T17:03:15.203996-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -43,30 +43,12 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401883199",
-      "hora": "15:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Leganés",
-      "visitante": "Castellón",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401860352",
       "hora": "19:30",
       "liga": "Serie B",
       "pais": "Brazil",
       "local": "América Mineiro",
       "visitante": "Juventude",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401888590",
-      "hora": "17:00",
-      "liga": "Division Profesional",
-      "pais": "Paraguay",
-      "local": "Sportivo San Lorenzo",
-      "visitante": "Deportivo Recoleta",
       "fuente": "ESPN"
     },
     {
@@ -85,87 +67,6 @@
       "pais": "Uruguay",
       "local": "Montevideo Wanderers",
       "visitante": "Albion FC",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861076",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Armenia",
-      "visitante": "Montenegro",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861075",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Georgia",
-      "visitante": "Ukraine",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861082",
-      "hora": "13:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Latvia",
-      "visitante": "Cyprus",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861081",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Belgium",
-      "visitante": "France",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861079",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Northern Ireland",
-      "visitante": "Hungary",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861078",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Romania",
-      "visitante": "Bosnia-Herzegovina",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861080",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Sweden",
-      "visitante": "Poland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861077",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Türkiye",
-      "visitante": "Italy",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900616",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Guadeloupe",
-      "visitante": "Barbados",
       "fuente": "ESPN"
     },
     {
@@ -220,42 +121,6 @@
       "pais": "CONCACAF",
       "local": "Guatemala",
       "visitante": "El Salvador",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920032",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Central African Republic",
-      "visitante": "Burkina Faso",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920033",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Equatorial Guinea",
-      "visitante": "Sierra Leone",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920031",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Zimbabwe",
-      "visitante": "Congo DR",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401920030",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Tunisia",
-      "visitante": "Botswana",
       "fuente": "ESPN"
     }
   ],
