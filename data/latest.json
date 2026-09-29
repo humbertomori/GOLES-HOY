@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-09-28",
-  "actualizado": "2026-09-28T17:03:15.203996-03:00",
+  "fecha": "2026-09-29",
+  "actualizado": "2026-09-29T07:04:52.681223-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -9,29 +9,13 @@
   ],
   "partidos": [
     {
-      "id": "espn:401888589",
-      "hora": "2026-09-28T22:15Z",
-      "liga": "Division Profesional",
-      "pais": "Paraguay",
-      "local": "Libertad",
-      "visitante": "Club Olimpia",
-      "prob_mas_2_5": 57.0,
-      "prob_btts": 62.5,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 62.5,
-      "estado": "pendiente",
-      "resultado": null
-    },
-    {
-      "id": "espn:401923659",
-      "hora": "2026-09-28T23:00Z",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Montevideo Wanderers",
-      "visitante": "Albion FC",
-      "prob_mas_2_5": 52.8,
+      "id": "espn:401877876",
+      "hora": "2026-09-30T01:05Z",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Independiente Medellín",
+      "visitante": "Millonarios",
+      "prob_mas_2_5": 53.6,
       "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
@@ -43,89 +27,323 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401860352",
+      "id": "espn:401860360",
       "hora": "19:30",
       "liga": "Serie B",
       "pais": "Brazil",
-      "local": "América Mineiro",
-      "visitante": "Juventude",
+      "local": "Botafogo-SP",
+      "visitante": "Ponte Preta",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401888589",
-      "hora": "19:15",
-      "liga": "Division Profesional",
-      "pais": "Paraguay",
-      "local": "Libertad",
-      "visitante": "Club Olimpia",
+      "id": "espn:401877965",
+      "hora": "17:30",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Deportivo Pereira",
+      "visitante": "Independiente Santa Fe",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401923659",
-      "hora": "20:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Montevideo Wanderers",
-      "visitante": "Albion FC",
+      "id": "espn:401877876",
+      "hora": "22:05",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Independiente Medellín",
+      "visitante": "Millonarios",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900614",
+      "id": "espn:401861089",
+      "hora": "13:00",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Finland",
+      "visitante": "Belarus",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861090",
+      "hora": "13:00",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Moldova",
+      "visitante": "Faroe Islands",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861083",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Bulgaria",
+      "visitante": "Estonia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861092",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Czechia",
+      "visitante": "England",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861086",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Luxembourg",
+      "visitante": "Iceland",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861088",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "San Marino",
+      "visitante": "Albania",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861091",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Scotland",
+      "visitante": "Switzerland",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861085",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Slovakia",
+      "visitante": "Kazakhstan",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861087",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Slovenia",
+      "visitante": "North Macedonia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861084",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Spain",
+      "visitante": "Croatia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900609",
+      "hora": "16:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "British Virgin Islands",
+      "visitante": "Turks and Caicos Islands",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900606",
+      "hora": "17:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "US Virgin Islands",
+      "visitante": "Bahamas",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900607",
       "hora": "18:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Cuba",
-      "visitante": "Bonaire",
+      "local": "French Guiana",
+      "visitante": "Sint Maarten",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900611",
-      "hora": "19:00",
+      "id": "espn:401900608",
+      "hora": "20:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Suriname",
-      "visitante": "Martinique",
+      "local": "Anguilla",
+      "visitante": "Aruba",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900612",
-      "hora": "21:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Jamaica",
-      "visitante": "Honduras",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900613",
-      "hora": "21:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "St. Kitts and Nevis",
-      "visitante": "Grenada",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900615",
-      "hora": "21:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "St. Lucia",
-      "visitante": "Bermuda",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900610",
+      "id": "espn:401900605",
       "hora": "23:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Guatemala",
-      "visitante": "El Salvador",
+      "local": "Belize",
+      "visitante": "St. Vincent and the Grenadines",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920029",
+      "hora": "09:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Comoros",
+      "visitante": "Namibia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920028",
+      "hora": "10:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Burundi",
+      "visitante": "Algeria",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920005",
+      "hora": "10:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Ethiopia",
+      "visitante": "Senegal",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920006",
+      "hora": "10:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Lesotho",
+      "visitante": "Morocco",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920004",
+      "hora": "10:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Mozambique",
+      "visitante": "Sudan",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920027",
+      "hora": "10:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "South Sudan",
+      "visitante": "Egypt",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920002",
+      "hora": "11:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Madagascar",
+      "visitante": "Tanzania",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920003",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Cape Verde",
+      "visitante": "Rwanda",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919999",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Ghana",
+      "visitante": "Gambia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920000",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Guinea-Bissau",
+      "visitante": "Nigeria",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401920001",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Uganda",
+      "visitante": "Libya",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919998",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Zambia",
+      "visitante": "Togo",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919992",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Benin",
+      "visitante": "Mauritania",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919995",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Congo",
+      "visitante": "Cameroon",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919993",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Gabon",
+      "visitante": "Niger",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919994",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Liberia",
+      "visitante": "Mali",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919996",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Somalia",
+      "visitante": "Ivory Coast",
       "fuente": "ESPN"
     }
   ],
-  "recibidos": 24,
-  "analizados": 5,
-  "seleccionados": 2,
+  "recibidos": 35,
+  "analizados": 3,
+  "seleccionados": 1,
   "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
