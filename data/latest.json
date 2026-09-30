@@ -1,6 +1,6 @@
 {
   "fecha": "2026-09-30",
-  "actualizado": "2026-09-30T07:06:12.502979-03:00",
+  "actualizado": "2026-09-30T17:04:12.586466-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -99,24 +99,6 @@
       "pais": "Uruguay",
       "local": "Montevideo City Torque",
       "visitante": "Peñarol",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401919991",
-      "hora": "13:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Eritrea",
-      "visitante": "South Africa",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886198",
-      "hora": "17:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Cienciano del Cusco",
-      "visitante": "Los Chankas",
       "fuente": "ESPN"
     }
   ],
