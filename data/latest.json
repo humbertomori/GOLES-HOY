@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-09-30",
-  "actualizado": "2026-09-30T17:04:12.586466-03:00",
+  "fecha": "2026-10-01",
+  "actualizado": "2026-10-01T07:06:29.107277-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -9,13 +9,13 @@
   ],
   "partidos": [
     {
-      "id": "espn:761833",
-      "hora": "2026-09-30T23:30Z",
+      "id": "espn:761798",
+      "hora": "2026-10-02T01:30Z",
       "liga": "MLS",
       "pais": "USA",
-      "local": "Red Bull New York",
-      "visitante": "St. Louis CITY SC",
-      "prob_mas_2_5": 56.3,
+      "local": "Seattle Sounders FC",
+      "visitante": "Sporting Kansas City",
+      "prob_mas_2_5": 59.9,
       "prob_btts": 68.8,
       "muestra": 16,
       "fuente": "ESPN",
@@ -25,14 +25,14 @@
       "resultado": null
     },
     {
-      "id": "espn:401886198",
-      "hora": "2026-09-30T20:00Z",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Cienciano del Cusco",
-      "visitante": "Los Chankas",
+      "id": "espn:401860367",
+      "hora": "2026-10-01T23:30Z",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Athletic",
+      "visitante": "Sport",
       "prob_mas_2_5": 68.4,
-      "prob_btts": 56.2,
+      "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
       "mercado": "Más de 2.5",
@@ -41,29 +41,29 @@
       "resultado": null
     },
     {
-      "id": "espn:401905187",
-      "hora": "2026-09-30T23:00Z",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Montevideo City Torque",
-      "visitante": "Peñarol",
-      "prob_mas_2_5": 65.6,
+      "id": "espn:401860365",
+      "hora": "2026-10-02T00:00Z",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Novorizontino",
+      "visitante": "Goiás",
+      "prob_mas_2_5": 52.2,
       "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
-      "mercado": "Más de 2.5",
-      "probabilidad": 65.6,
+      "mercado": "Ambos marcan",
+      "probabilidad": 62.5,
       "estado": "pendiente",
       "resultado": null
     },
     {
-      "id": "espn:401877865",
-      "hora": "2026-10-01T01:00Z",
+      "id": "espn:401877909",
+      "hora": "2026-10-02T01:00Z",
       "liga": "Primera A",
       "pais": "Colombia",
-      "local": "Atlético Nacional",
-      "visitante": "Atlético Junior",
-      "prob_mas_2_5": 50.6,
+      "local": "Internacional de Bogotá",
+      "visitante": "Once Caldas",
+      "prob_mas_2_5": 44.6,
       "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
@@ -75,34 +75,196 @@
   ],
   "cartelera": [
     {
-      "id": "espn:761833",
-      "hora": "20:30",
+      "id": "espn:761798",
+      "hora": "22:30",
       "liga": "MLS",
       "pais": "USA",
-      "local": "Red Bull New York",
-      "visitante": "St. Louis CITY SC",
+      "local": "Seattle Sounders FC",
+      "visitante": "Sporting Kansas City",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401877865",
+      "id": "espn:401860367",
+      "hora": "20:30",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Athletic",
+      "visitante": "Sport",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401860365",
+      "hora": "21:00",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Novorizontino",
+      "visitante": "Goiás",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401877909",
       "hora": "22:00",
       "liga": "Primera A",
       "pais": "Colombia",
-      "local": "Atlético Nacional",
-      "visitante": "Atlético Junior",
+      "local": "Internacional de Bogotá",
+      "visitante": "Once Caldas",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401905187",
+      "id": "espn:401861093",
+      "hora": "13:00",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Azerbaijan",
+      "visitante": "Liechtenstein",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861096",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Denmark",
+      "visitante": "Portugal",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861097",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Germany",
+      "visitante": "Serbia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861098",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Greece",
+      "visitante": "Netherlands",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861095",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Israel",
+      "visitante": "Kosovo",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861099",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Malta",
+      "visitante": "Gibraltar",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861094",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Republic of Ireland",
+      "visitante": "Austria",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861100",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Wales",
+      "visitante": "Norway",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900601",
+      "hora": "17:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "British Virgin Islands",
+      "visitante": "Montserrat",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900597",
+      "hora": "17:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "US Virgin Islands",
+      "visitante": "St. Martin",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900600",
+      "hora": "18:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Dominica",
+      "visitante": "Guyana",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900595",
+      "hora": "19:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Curaçao",
+      "visitante": "Trinidad and Tobago",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900599",
       "hora": "20:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Montevideo City Torque",
-      "visitante": "Peñarol",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Anguilla",
+      "visitante": "Antigua and Barbuda",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900598",
+      "hora": "21:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Cayman Islands",
+      "visitante": "Puerto Rico",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900594",
+      "hora": "21:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Dominican Republic",
+      "visitante": "Haiti",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900596",
+      "hora": "23:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Nicaragua",
+      "visitante": "Costa Rica",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401919997",
+      "hora": "13:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Guinea",
+      "visitante": "Kenya",
       "fuente": "ESPN"
     }
   ],
-  "recibidos": 5,
+  "recibidos": 21,
   "analizados": 4,
   "seleccionados": 4,
   "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
