@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-04",
-  "actualizado": "2026-10-04T13:06:20.851882-03:00",
+  "actualizado": "2026-10-04T18:26:54.783908-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -91,60 +91,6 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401883162",
-      "hora": "13:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Castellón",
-      "visitante": "Ceuta",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883192",
-      "hora": "13:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Las Palmas",
-      "visitante": "Real Valladolid",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883190",
-      "hora": "16:00",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "CD Sabadell",
-      "visitante": "FC Andorra",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883160",
-      "hora": "16:00",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Girona",
-      "visitante": "Mallorca",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841589",
-      "hora": "14:45",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Huracán",
-      "visitante": "Aldosivi",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841584",
-      "hora": "17:00",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Talleres (Córdoba)",
-      "visitante": "Belgrano (Córdoba)",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401841597",
       "hora": "19:15",
       "liga": "Primera Division",
@@ -160,33 +106,6 @@
       "pais": "Argentina",
       "local": "Estudiantes de Río Cuarto",
       "visitante": "Racing Club",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878051",
-      "hora": "16:00",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Deportivo Pasto",
-      "visitante": "Fortaleza CEIF",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878066",
-      "hora": "18:05",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Cúcuta Deportivo",
-      "visitante": "Deportivo Pereira",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401877909",
-      "hora": "18:05",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Internacional de Bogotá",
-      "visitante": "Once Caldas",
       "fuente": "ESPN"
     },
     {
@@ -208,93 +127,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401923676",
-      "hora": "16:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Cerro",
-      "visitante": "Montevideo Wanderers",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401923691",
       "hora": "19:30",
       "liga": "Primera Division",
       "pais": "Uruguay",
       "local": "Racing (Montevideo)",
       "visitante": "Peñarol",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861123",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Greece",
-      "visitante": "Germany",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861122",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Netherlands",
-      "visitante": "Serbia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861126",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Portugal",
-      "visitante": "Norway",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861124",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Republic of Ireland",
-      "visitante": "Israel",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861125",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Wales",
-      "visitante": "Denmark",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900584",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Guyana",
-      "visitante": "Dominica",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900585",
-      "hora": "17:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Bahamas",
-      "visitante": "US Virgin Islands",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900587",
-      "hora": "17:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Turks and Caicos Islands",
-      "visitante": "British Virgin Islands",
       "fuente": "ESPN"
     },
     {
