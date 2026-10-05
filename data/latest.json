@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-10-04",
-  "actualizado": "2026-10-04T18:26:54.783908-03:00",
+  "fecha": "2026-10-05",
+  "actualizado": "2026-10-05T07:07:23.250865-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -9,45 +9,13 @@
   ],
   "partidos": [
     {
-      "id": "espn:401877900",
-      "hora": "2026-10-04T23:10Z",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Atlético Bucaramanga",
-      "visitante": "Atlético Junior",
-      "prob_mas_2_5": 55.3,
-      "prob_btts": 75.0,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 75.0,
-      "estado": "pendiente",
-      "resultado": null
-    },
-    {
-      "id": "espn:401841591",
-      "hora": "2026-10-05T00:30Z",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Estudiantes de Río Cuarto",
-      "visitante": "Racing Club",
-      "prob_mas_2_5": 50.0,
-      "prob_btts": 68.8,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 68.8,
-      "estado": "pendiente",
-      "resultado": null
-    },
-    {
-      "id": "espn:401883191",
-      "hora": "2026-10-04T12:00Z",
+      "id": "espn:401883161",
+      "hora": "2026-10-05T18:30Z",
       "liga": "LaLiga 2",
       "pais": "Spain",
-      "local": "Real Sociedad II",
-      "visitante": "Granada",
-      "prob_mas_2_5": 55.4,
+      "local": "Córdoba",
+      "visitante": "Tenerife",
+      "prob_mas_2_5": 57.5,
       "prob_btts": 63.6,
       "muestra": 14,
       "fuente": "ESPN",
@@ -57,13 +25,13 @@
       "resultado": null
     },
     {
-      "id": "espn:401841589",
-      "hora": "2026-10-04T17:45Z",
+      "id": "espn:401841585",
+      "hora": "2026-10-05T22:00Z",
       "liga": "Primera Division",
       "pais": "Argentina",
-      "local": "Huracán",
-      "visitante": "Aldosivi",
-      "prob_mas_2_5": 47.3,
+      "local": "Vélez Sarsfield",
+      "visitante": "Platense",
+      "prob_mas_2_5": 34.8,
       "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
@@ -73,13 +41,29 @@
       "resultado": null
     },
     {
-      "id": "espn:401878066",
-      "hora": "2026-10-04T21:05Z",
+      "id": "espn:401877960",
+      "hora": "2026-10-06T00:00Z",
       "liga": "Primera A",
       "pais": "Colombia",
-      "local": "Cúcuta Deportivo",
-      "visitante": "Deportivo Pereira",
-      "prob_mas_2_5": 54.2,
+      "local": "Independiente Medellín",
+      "visitante": "Independiente Santa Fe",
+      "prob_mas_2_5": 57.7,
+      "prob_btts": 62.5,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 62.5,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401923690",
+      "hora": "2026-10-05T23:00Z",
+      "liga": "Primera Division",
+      "pais": "Uruguay",
+      "local": "Nacional",
+      "visitante": "Montevideo City Torque",
+      "prob_mas_2_5": 52.8,
       "prob_btts": 62.5,
       "muestra": 16,
       "fuente": "ESPN",
@@ -91,98 +75,233 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401841597",
+      "id": "espn:401883161",
+      "hora": "15:30",
+      "liga": "LaLiga 2",
+      "pais": "Spain",
+      "local": "Córdoba",
+      "visitante": "Tenerife",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841592",
+      "hora": "16:45",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Deportivo Riestra",
+      "visitante": "Central Córdoba (Santiago del Estero)",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841590",
+      "hora": "19:00",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Estudiantes de La Plata",
+      "visitante": "Gimnasia (Mendoza)",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841585",
+      "hora": "19:00",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Vélez Sarsfield",
+      "visitante": "Platense",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841595",
+      "hora": "21:15",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Banfield",
+      "visitante": "Rosario Central",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401888661",
+      "hora": "10:00",
+      "liga": "Division Profesional",
+      "pais": "Paraguay",
+      "local": "Deportivo Recoleta",
+      "visitante": "Libertad",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401888659",
+      "hora": "17:00",
+      "liga": "Division Profesional",
+      "pais": "Paraguay",
+      "local": "Sportivo Trinidense",
+      "visitante": "Sportivo Luqueño",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401888664",
       "hora": "19:15",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Argentinos Juniors",
-      "visitante": "Tigre",
+      "liga": "Division Profesional",
+      "pais": "Paraguay",
+      "local": "Cerro Porteño",
+      "visitante": "2 de Mayo",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401841591",
-      "hora": "21:30",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Estudiantes de Río Cuarto",
-      "visitante": "Racing Club",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401877900",
-      "hora": "20:10",
+      "id": "espn:401877960",
+      "hora": "21:00",
       "liga": "Primera A",
       "pais": "Colombia",
-      "local": "Atlético Bucaramanga",
-      "visitante": "Atlético Junior",
+      "local": "Independiente Medellín",
+      "visitante": "Independiente Santa Fe",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401878014",
-      "hora": "22:15",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Llaneros FC",
-      "visitante": "América de Cali",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401923691",
-      "hora": "19:30",
+      "id": "espn:401923690",
+      "hora": "20:00",
       "liga": "Primera Division",
       "pais": "Uruguay",
-      "local": "Racing (Montevideo)",
-      "visitante": "Peñarol",
+      "local": "Nacional",
+      "visitante": "Montevideo City Torque",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900583",
+      "id": "espn:401861127",
+      "hora": "13:00",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Cyprus",
+      "visitante": "Latvia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861133",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Bosnia-Herzegovina",
+      "visitante": "Poland",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861129",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "France",
+      "visitante": "Belgium",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861131",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Italy",
+      "visitante": "Türkiye",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861130",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Montenegro",
+      "visitante": "Armenia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861132",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Northern Ireland",
+      "visitante": "Georgia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861128",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Romania",
+      "visitante": "Sweden",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861134",
+      "hora": "15:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Ukraine",
+      "visitante": "Hungary",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900579",
+      "hora": "16:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Guadeloupe",
+      "visitante": "St. Lucia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900577",
+      "hora": "18:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Cuba",
+      "visitante": "St. Kitts and Nevis",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900580",
       "hora": "19:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Puerto Rico",
-      "visitante": "Cayman Islands",
+      "local": "Martinique",
+      "visitante": "El Salvador",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900574",
-      "hora": "19:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Trinidad and Tobago",
-      "visitante": "Curaçao",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900586",
-      "hora": "20:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Aruba",
-      "visitante": "Anguilla",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900575",
+      "id": "espn:401900578",
       "hora": "21:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Costa Rica",
-      "visitante": "Haiti",
+      "local": "Bermuda",
+      "visitante": "Barbados",
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401900573",
+      "id": "espn:401900576",
+      "hora": "21:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Grenada",
+      "visitante": "Bonaire",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900581",
+      "hora": "21:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Guatemala",
+      "visitante": "Suriname",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401900582",
       "hora": "23:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
-      "local": "Nicaragua",
-      "visitante": "Dominican Republic",
+      "local": "Honduras",
+      "visitante": "Jamaica",
       "fuente": "ESPN"
     }
   ],
-  "recibidos": 36,
-  "analizados": 20,
-  "seleccionados": 5,
+  "recibidos": 25,
+  "analizados": 10,
+  "seleccionados": 4,
   "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
