@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-06",
-  "actualizado": "2026-10-06T07:05:25.360517-03:00",
+  "actualizado": "2026-10-06T17:03:40.080349-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -95,129 +95,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401888663",
-      "hora": "17:00",
-      "liga": "Division Profesional",
-      "pais": "Paraguay",
-      "local": "Sportivo Ameliano",
-      "visitante": "Rubio Ñú",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401888662",
       "hora": "19:15",
       "liga": "Division Profesional",
       "pais": "Paraguay",
       "local": "Club Olimpia",
       "visitante": "Nacional Asunción",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861135",
-      "hora": "11:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Kazakhstan",
-      "visitante": "Faroe Islands",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861140",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Albania",
-      "visitante": "San Marino",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861138",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Belarus",
-      "visitante": "Finland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861137",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Croatia",
-      "visitante": "Spain",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861142",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "England",
-      "visitante": "Czechia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861136",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Estonia",
-      "visitante": "Iceland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861141",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Luxembourg",
-      "visitante": "Bulgaria",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861144",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Moldova",
-      "visitante": "Slovakia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861143",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Scotland",
-      "visitante": "Slovenia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861139",
-      "hora": "15:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Switzerland",
-      "visitante": "North Macedonia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900572",
-      "hora": "17:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Montserrat",
-      "visitante": "Turks and Caicos Islands",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401900570",
-      "hora": "17:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "St. Martin",
-      "visitante": "Bahamas",
       "fuente": "ESPN"
     },
     {
@@ -245,15 +128,6 @@
       "pais": "CONCACAF",
       "local": "French Guiana",
       "visitante": "Belize",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401919990",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Angola",
-      "visitante": "Malawi",
       "fuente": "ESPN"
     }
   ],
