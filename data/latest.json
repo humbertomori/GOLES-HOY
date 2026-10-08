@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-08",
-  "actualizado": "2026-10-08T07:06:50.943708-03:00",
+  "actualizado": "2026-10-08T17:06:38.522058-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -176,15 +176,6 @@
       "pais": "Colombia",
       "local": "Fortaleza CEIF",
       "visitante": "Millonarios",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886173",
-      "hora": "15:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Deportivo Moquegua",
-      "visitante": "Cienciano del Cusco",
       "fuente": "ESPN"
     },
     {
