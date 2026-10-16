@@ -1,52 +1,16 @@
 {
-  "fecha": "2026-10-15",
-  "actualizado": "2026-10-15T17:15:13.304913-03:00",
+  "fecha": "2026-10-16",
+  "actualizado": "2026-10-16T07:18:55.791520-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [
-    {
-      "id": "espn:401841622",
-      "hora": "2026-10-15T23:00Z",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Huracán",
-      "visitante": "Gimnasia La Plata",
-      "prob_mas_2_5": 44.6,
-      "prob_btts": 68.8,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 68.8,
-      "estado": "pendiente",
-      "resultado": null
-    }
-  ],
-  "cartelera": [
-    {
-      "id": "espn:401841622",
-      "hora": "20:00",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Huracán",
-      "visitante": "Gimnasia La Plata",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401912523",
-      "hora": "21:30",
-      "liga": "Copa Libertadores",
-      "pais": "South America",
-      "local": "Estudiantes de La Plata",
-      "visitante": "Flamengo",
-      "fuente": "ESPN"
-    }
-  ],
-  "recibidos": 38,
-  "analizados": 2,
-  "seleccionados": 1,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
+  "partidos": [],
+  "cartelera": [],
+  "recibidos": 0,
+  "analizados": 0,
+  "seleccionados": 0,
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
 }
