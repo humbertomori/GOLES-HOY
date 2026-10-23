@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-10-22",
-  "actualizado": "2026-10-22T17:17:29.701148-03:00",
+  "fecha": "2026-10-23",
+  "actualizado": "2026-10-23T07:19:57.256454-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -8,28 +8,9 @@
     "Ambos marcan"
   ],
   "partidos": [],
-  "cartelera": [
-    {
-      "id": "espn:401877877",
-      "hora": "22:00",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Atlético Nacional",
-      "visitante": "Deportivo Pasto",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401912521",
-      "hora": "21:30",
-      "liga": "Copa Libertadores",
-      "pais": "South America",
-      "local": "Flamengo",
-      "visitante": "Estudiantes de La Plata",
-      "fuente": "ESPN"
-    }
-  ],
-  "recibidos": 38,
-  "analizados": 2,
+  "cartelera": [],
+  "recibidos": 0,
+  "analizados": 0,
   "seleccionados": 0,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
 }
