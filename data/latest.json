@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-27",
-  "actualizado": "2026-10-27T12:36:36.885619-03:00",
+  "actualizado": "2026-10-27T20:20:06.248753-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -123,156 +123,12 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401874980",
-      "hora": "14:30",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Sassuolo",
-      "visitante": "Lazio",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874780",
-      "hora": "16:45",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "AS Roma",
-      "visitante": "Cagliari",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874786",
-      "hora": "16:45",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Torino",
-      "visitante": "Como",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899578",
-      "hora": "15:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Benevento",
-      "visitante": "Catanzaro",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899579",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Ascoli",
-      "visitante": "Sampdoria",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899576",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Cesena",
-      "visitante": "Empoli",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899573",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Mantova",
-      "visitante": "Cremonese",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899572",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Padova",
-      "visitante": "Sudtirol",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899574",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Vicenza",
-      "visitante": "Modena",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899570",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Virtus Entella",
-      "visitante": "US Avellino",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878552",
-      "hora": "16:45",
-      "liga": "Championship",
-      "pais": "Scotland",
-      "local": "Stenhousemuir",
-      "visitante": "Dunfermline Athletic",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842858",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "AIK",
-      "visitante": "IF Elfsborg",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401860406",
-      "hora": "20:00",
-      "liga": "Serie B",
-      "pais": "Brazil",
-      "local": "Ceará",
-      "visitante": "Goiás",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841642",
-      "hora": "19:00",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Argentinos Juniors",
-      "visitante": "Independiente Rivadavia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401877953",
-      "hora": "20:00",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Cúcuta Deportivo",
-      "visitante": "Águilas Doradas",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401877861",
       "hora": "22:05",
       "liga": "Primera A",
       "pais": "Colombia",
       "local": "Boyacá Chicó FC",
       "visitante": "Atlético Junior",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886153",
-      "hora": "17:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Juan Pablo II",
-      "visitante": "Sport Huancayo",
       "fuente": "ESPN"
     },
     {
