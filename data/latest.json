@@ -1,16 +1,310 @@
 {
-  "fecha": "2026-10-26",
-  "actualizado": "2026-10-26T20:27:25.017675-03:00",
+  "fecha": "2026-10-27",
+  "actualizado": "2026-10-27T12:36:36.885619-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [],
-  "cartelera": [],
-  "recibidos": 0,
-  "analizados": 0,
-  "seleccionados": 0,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
+  "partidos": [
+    {
+      "id": "openfootball:it.1.json:2026-10-27:Torino FC:Como 1907",
+      "hora": "2026-10-27T12:00:00-03:00",
+      "liga": "Serie A",
+      "pais": "",
+      "local": "Torino FC",
+      "visitante": "Como 1907",
+      "prob_mas_2_5": 55.2,
+      "prob_btts": 77.6,
+      "muestra": 10,
+      "fuente": "OpenFootball",
+      "mercado": "Ambos marcan",
+      "probabilidad": 77.6,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401899579",
+      "hora": "2026-10-27T19:00Z",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Ascoli",
+      "visitante": "Sampdoria",
+      "prob_mas_2_5": 50.8,
+      "prob_btts": 75.0,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 75.0,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401874980",
+      "hora": "2026-10-27T17:30Z",
+      "liga": "Serie A",
+      "pais": "Italy",
+      "local": "Sassuolo",
+      "visitante": "Lazio",
+      "prob_mas_2_5": 64.4,
+      "prob_btts": 68.8,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 68.8,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401842858",
+      "hora": "2026-10-27T18:00Z",
+      "liga": "Allsvenskan",
+      "pais": "Sweden",
+      "local": "AIK",
+      "visitante": "IF Elfsborg",
+      "prob_mas_2_5": 62.7,
+      "prob_btts": 68.8,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 68.8,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401899574",
+      "hora": "2026-10-27T19:00Z",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Vicenza",
+      "visitante": "Modena",
+      "prob_mas_2_5": 67.8,
+      "prob_btts": 62.5,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 67.8,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401886153",
+      "hora": "2026-10-27T20:00Z",
+      "liga": "Liga 1",
+      "pais": "Peru",
+      "local": "Juan Pablo II",
+      "visitante": "Sport Huancayo",
+      "prob_mas_2_5": 63.3,
+      "prob_btts": 62.5,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 63.3,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401841642",
+      "hora": "2026-10-27T22:00Z",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Argentinos Juniors",
+      "visitante": "Independiente Rivadavia",
+      "prob_mas_2_5": 45.3,
+      "prob_btts": 62.5,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 62.5,
+      "estado": "pendiente",
+      "resultado": null
+    }
+  ],
+  "cartelera": [
+    {
+      "id": "espn:401874980",
+      "hora": "14:30",
+      "liga": "Serie A",
+      "pais": "Italy",
+      "local": "Sassuolo",
+      "visitante": "Lazio",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401874780",
+      "hora": "16:45",
+      "liga": "Serie A",
+      "pais": "Italy",
+      "local": "AS Roma",
+      "visitante": "Cagliari",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401874786",
+      "hora": "16:45",
+      "liga": "Serie A",
+      "pais": "Italy",
+      "local": "Torino",
+      "visitante": "Como",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899578",
+      "hora": "15:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Benevento",
+      "visitante": "Catanzaro",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899579",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Ascoli",
+      "visitante": "Sampdoria",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899576",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Cesena",
+      "visitante": "Empoli",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899573",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Mantova",
+      "visitante": "Cremonese",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899572",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Padova",
+      "visitante": "Sudtirol",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899574",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Vicenza",
+      "visitante": "Modena",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401899570",
+      "hora": "16:00",
+      "liga": "Serie B",
+      "pais": "Italy",
+      "local": "Virtus Entella",
+      "visitante": "US Avellino",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401878552",
+      "hora": "16:45",
+      "liga": "Championship",
+      "pais": "Scotland",
+      "local": "Stenhousemuir",
+      "visitante": "Dunfermline Athletic",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401842858",
+      "hora": "15:00",
+      "liga": "Allsvenskan",
+      "pais": "Sweden",
+      "local": "AIK",
+      "visitante": "IF Elfsborg",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401860406",
+      "hora": "20:00",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Ceará",
+      "visitante": "Goiás",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841642",
+      "hora": "19:00",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Argentinos Juniors",
+      "visitante": "Independiente Rivadavia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401877953",
+      "hora": "20:00",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Cúcuta Deportivo",
+      "visitante": "Águilas Doradas",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401877861",
+      "hora": "22:05",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Boyacá Chicó FC",
+      "visitante": "Atlético Junior",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401886153",
+      "hora": "17:00",
+      "liga": "Liga 1",
+      "pais": "Peru",
+      "local": "Juan Pablo II",
+      "visitante": "Sport Huancayo",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "openfootball:it.1.json:2026-10-27:US Sassuolo Calcio:SS Lazio",
+      "hora": "Horario no disponible",
+      "liga": "Serie A",
+      "pais": "",
+      "local": "US Sassuolo Calcio",
+      "visitante": "SS Lazio",
+      "fuente": "OpenFootball"
+    },
+    {
+      "id": "openfootball:it.1.json:2026-10-27:AS Roma:Cagliari Calcio",
+      "hora": "Horario no disponible",
+      "liga": "Serie A",
+      "pais": "",
+      "local": "AS Roma",
+      "visitante": "Cagliari Calcio",
+      "fuente": "OpenFootball"
+    },
+    {
+      "id": "openfootball:it.1.json:2026-10-27:Torino FC:Como 1907",
+      "hora": "Horario no disponible",
+      "liga": "Serie A",
+      "pais": "",
+      "local": "Torino FC",
+      "visitante": "Como 1907",
+      "fuente": "OpenFootball"
+    }
+  ],
+  "recibidos": 20,
+  "analizados": 20,
+  "seleccionados": 7,
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
