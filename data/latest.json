@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-28",
-  "actualizado": "2026-10-28T13:20:44.737420-03:00",
+  "actualizado": "2026-10-28T20:42:51.745341-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -171,213 +171,6 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401874993",
-      "hora": "14:30",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "AC Milan",
-      "visitante": "Bologna",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874965",
-      "hora": "14:30",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Parma",
-      "visitante": "Udinese",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874773",
-      "hora": "14:30",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Venezia",
-      "visitante": "Internazionale",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874988",
-      "hora": "16:45",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Genoa",
-      "visitante": "Juventus",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874799",
-      "hora": "16:45",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Monza",
-      "visitante": "Napoli",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899571",
-      "hora": "15:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Pisa",
-      "visitante": "Palermo",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899577",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Carrarese",
-      "visitante": "Arezzo",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401899575",
-      "hora": "16:00",
-      "liga": "Serie B",
-      "pais": "Italy",
-      "local": "Juve Stabia",
-      "visitante": "Hellas Verona",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878356",
-      "hora": "16:45",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "Aberdeen",
-      "visitante": "Falkirk",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878355",
-      "hora": "16:45",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "Celtic",
-      "visitante": "Dundee United",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878354",
-      "hora": "16:45",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "Dundee",
-      "visitante": "Kilmarnock",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878352",
-      "hora": "16:45",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "St Johnstone",
-      "visitante": "Motherwell",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878351",
-      "hora": "16:45",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "St Mirren",
-      "visitante": "Hibernian",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401878353",
-      "hora": "17:00",
-      "liga": "Premiership",
-      "pais": "Scotland",
-      "local": "Heart of Midlothian",
-      "visitante": "Rangers",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842863",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "Degerfors IF",
-      "visitante": "Västerås SK",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842862",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "Halmstads BK",
-      "visitante": "Malmö FF",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842864",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "IF Brommapojkarna",
-      "visitante": "BK Häcken",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842860",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "IFK Göteborg",
-      "visitante": "Djurgården",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:761907",
-      "hora": "20:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "Charlotte FC",
-      "visitante": "CF Montréal",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:761908",
-      "hora": "20:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "Inter Miami CF",
-      "visitante": "FC Cincinnati",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:761909",
-      "hora": "20:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "New England Revolution",
-      "visitante": "Red Bull New York",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:761905",
-      "hora": "20:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "New York City FC",
-      "visitante": "Atlanta United FC",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:761906",
-      "hora": "20:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "Toronto FC",
-      "visitante": "D.C. United",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:761910",
       "hora": "21:30",
       "liga": "MLS",
@@ -459,33 +252,6 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401841289",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Fluminense",
-      "visitante": "Internacional",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841291",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Red Bull Bragantino",
-      "visitante": "Chapecoense",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841293",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Santos",
-      "visitante": "Palmeiras",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401841296",
       "hora": "21:30",
       "liga": "Serie A",
@@ -504,48 +270,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401877998",
-      "hora": "20:00",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "Once Caldas",
-      "visitante": "Alianza FC",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401877878",
       "hora": "22:05",
       "liga": "Primera A",
       "pais": "Colombia",
       "local": "Internacional de Bogotá",
       "visitante": "Independiente Medellín",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401850663",
-      "hora": "20:30",
-      "liga": "Primera Division",
-      "pais": "Chile",
-      "local": "Universidad Católica",
-      "visitante": "Audax Italiano",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886154",
-      "hora": "15:15",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "FC Cajamarca",
-      "visitante": "UTC",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886130",
-      "hora": "17:30",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Alianza Atlético",
-      "visitante": "Deportivo Garcilaso",
       "fuente": "ESPN"
     },
     {
