@@ -1,6 +1,6 @@
 {
   "fecha": "2026-10-29",
-  "actualizado": "2026-10-29T13:30:37.302538-03:00",
+  "actualizado": "2026-10-29T20:42:12.488866-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -107,69 +107,6 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401874976",
-      "hora": "14:30",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Frosinone",
-      "visitante": "Lecce",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401874969",
-      "hora": "16:45",
-      "liga": "Serie A",
-      "pais": "Italy",
-      "local": "Fiorentina",
-      "visitante": "Atalanta",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842861",
-      "hora": "14:30",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "Hammarby IF",
-      "visitante": "IK Sirius",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842859",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "Kalmar FF",
-      "visitante": "GAIS",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401842865",
-      "hora": "15:00",
-      "liga": "Allsvenskan",
-      "pais": "Sweden",
-      "local": "Örgryte IS",
-      "visitante": "Mjällby AIF",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841288",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Atlético-MG",
-      "visitante": "Cruzeiro",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841292",
-      "hora": "20:00",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Vasco da Gama",
-      "visitante": "Flamengo",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401841290",
       "hora": "21:30",
       "liga": "Serie A",
@@ -179,39 +116,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401878035",
-      "hora": "20:30",
-      "liga": "Primera A",
-      "pais": "Colombia",
-      "local": "América de Cali",
-      "visitante": "Fortaleza CEIF",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401877845",
       "hora": "22:30",
       "liga": "Primera A",
       "pais": "Colombia",
       "local": "Atlético Nacional",
       "visitante": "Independiente Santa Fe",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886155",
-      "hora": "15:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Los Chankas",
-      "visitante": "Cusco FC",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886131",
-      "hora": "17:30",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Sporting Cristal",
-      "visitante": "Alianza Lima",
       "fuente": "ESPN"
     },
     {
