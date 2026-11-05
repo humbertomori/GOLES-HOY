@@ -1,16 +1,266 @@
 {
-  "fecha": "2026-11-04",
-  "actualizado": "2026-11-04T21:37:18.762050-03:00",
+  "fecha": "2026-11-05",
+  "actualizado": "2026-11-05T14:45:07.502619-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [],
-  "cartelera": [],
-  "recibidos": 0,
-  "analizados": 0,
-  "seleccionados": 0,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
+  "partidos": [
+    {
+      "id": "espn:401841667",
+      "hora": "2026-11-05T22:15Z",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Gimnasia La Plata",
+      "visitante": "Belgrano (Córdoba)",
+      "prob_mas_2_5": 43.9,
+      "prob_btts": 68.8,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 68.8,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401841303",
+      "hora": "2026-11-06T00:30Z",
+      "liga": "Serie A",
+      "pais": "Brazil",
+      "local": "Cruzeiro",
+      "visitante": "Bahia",
+      "prob_mas_2_5": 61.6,
+      "prob_btts": 62.5,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 62.5,
+      "estado": "pendiente",
+      "resultado": null
+    }
+  ],
+  "cartelera": [
+    {
+      "id": "espn:401841300",
+      "hora": "19:30",
+      "liga": "Serie A",
+      "pais": "Brazil",
+      "local": "Palmeiras",
+      "visitante": "Remo",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841303",
+      "hora": "21:30",
+      "liga": "Serie A",
+      "pais": "Brazil",
+      "local": "Cruzeiro",
+      "visitante": "Bahia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401860431",
+      "hora": "19:30",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Botafogo-SP",
+      "visitante": "Londrina",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841659",
+      "hora": "15:00",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Aldosivi",
+      "visitante": "River Plate",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401841667",
+      "hora": "19:15",
+      "liga": "Primera Division",
+      "pais": "Argentina",
+      "local": "Gimnasia La Plata",
+      "visitante": "Belgrano (Córdoba)",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401888568",
+      "hora": "19:00",
+      "liga": "Division Profesional",
+      "pais": "Paraguay",
+      "local": "Rubio Ñú",
+      "visitante": "Sportivo Luqueño",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915529",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "AZ Alkmaar",
+      "visitante": "Juventus",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915533",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Bayer Leverkusen",
+      "visitante": "Marseille",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915525",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Benfica",
+      "visitante": "Lech Poznan",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915531",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Celta Vigo",
+      "visitante": "Union St.-Gilloise",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915522",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Celtic",
+      "visitante": "Besiktas",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915532",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Hapoel Be'er",
+      "visitante": "OFI Crete",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915524",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "SK Sturm Graz",
+      "visitante": "NK Celje",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915523",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Sunderland",
+      "visitante": "Dinamo Zagreb",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915530",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Torreense",
+      "visitante": "Ararat-Armenia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915824",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "AS Monaco",
+      "visitante": "FC Nordsjælland",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915817",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "CSU Craiova",
+      "visitante": "Egnatia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915740",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "F.C. København",
+      "visitante": "Iberia 1999",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915823",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "FC Lugano",
+      "visitante": "Kauno Zalgiris",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915822",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "FC Twente",
+      "visitante": "Pafos",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915821",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Getafe",
+      "visitante": "Brighton & Hove Albion",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915819",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Panathinaikos",
+      "visitante": "CSKA Sofia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915818",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Riga FC",
+      "visitante": "Jablonec",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915820",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Sint-Truidense",
+      "visitante": "SK Brann",
+      "fuente": "ESPN"
+    }
+  ],
+  "recibidos": 41,
+  "analizados": 6,
+  "seleccionados": 2,
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
