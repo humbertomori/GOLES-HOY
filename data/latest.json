@@ -1,49 +1,16 @@
 {
-  "fecha": "2026-11-05",
-  "actualizado": "2026-11-05T21:37:15.205999-03:00",
+  "fecha": "2026-11-06",
+  "actualizado": "2026-11-06T14:00:26.955010-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [
-    {
-      "id": "espn:401841667",
-      "hora": "2026-11-05T22:15Z",
-      "liga": "Primera Division",
-      "pais": "Argentina",
-      "local": "Gimnasia La Plata",
-      "visitante": "Belgrano (Córdoba)",
-      "prob_mas_2_5": 43.9,
-      "prob_btts": 68.8,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 68.8,
-      "estado": "pendiente",
-      "resultado": null
-    },
-    {
-      "id": "espn:401841303",
-      "hora": "2026-11-06T00:30Z",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Cruzeiro",
-      "visitante": "Bahia",
-      "prob_mas_2_5": 61.6,
-      "prob_btts": 62.5,
-      "muestra": 16,
-      "fuente": "ESPN",
-      "mercado": "Ambos marcan",
-      "probabilidad": 62.5,
-      "estado": "pendiente",
-      "resultado": null
-    }
-  ],
+  "partidos": [],
   "cartelera": [],
-  "recibidos": 41,
-  "analizados": 6,
-  "seleccionados": 2,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
+  "recibidos": 0,
+  "analizados": 0,
+  "seleccionados": 0,
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
 }
