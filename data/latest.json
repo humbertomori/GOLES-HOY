@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-11-10",
-  "actualizado": "2026-11-10T21:18:45.141687-03:00",
+  "fecha": "2026-11-11",
+  "actualizado": "2026-11-11T14:33:12.514246-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -8,9 +8,19 @@
     "Ambos marcan"
   ],
   "partidos": [],
-  "cartelera": [],
-  "recibidos": 0,
-  "analizados": 0,
+  "cartelera": [
+    {
+      "id": "espn:401860435",
+      "hora": "19:00",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Londrina",
+      "visitante": "Náutico",
+      "fuente": "ESPN"
+    }
+  ],
+  "recibidos": 1,
+  "analizados": 1,
   "seleccionados": 0,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
