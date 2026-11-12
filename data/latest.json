@@ -1,16 +1,287 @@
 {
-  "fecha": "2026-11-11",
-  "actualizado": "2026-11-11T22:43:52.696784-03:00",
+  "fecha": "2026-11-12",
+  "actualizado": "2026-11-12T14:47:20.311596-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [],
-  "cartelera": [],
-  "recibidos": 1,
-  "analizados": 1,
-  "seleccionados": 0,
+  "partidos": [
+    {
+      "id": "espn:401861150",
+      "hora": "2026-11-12T19:45Z",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "England",
+      "visitante": "Croatia",
+      "prob_mas_2_5": 81.3,
+      "prob_btts": 48.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 81.3,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401861148",
+      "hora": "2026-11-12T19:45Z",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Czechia",
+      "visitante": "Spain",
+      "prob_mas_2_5": 76.5,
+      "prob_btts": 72.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 76.5,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401860436",
+      "hora": "2026-11-12T23:00Z",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "São Bernardo",
+      "visitante": "Athletic",
+      "prob_mas_2_5": 65.9,
+      "prob_btts": 75.0,
+      "muestra": 16,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 75.0,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401929779",
+      "hora": "2026-11-12T22:00Z",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Aruba",
+      "visitante": "Martinique",
+      "prob_mas_2_5": 59.1,
+      "prob_btts": 72.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 72.0,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401929777",
+      "hora": "2026-11-12T20:00Z",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Bonaire",
+      "visitante": "Cuba",
+      "prob_mas_2_5": 70.8,
+      "prob_btts": 60.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 70.8,
+      "estado": "pendiente",
+      "resultado": null
+    }
+  ],
+  "cartelera": [
+    {
+      "id": "espn:401860434",
+      "hora": "19:00",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "Ponte Preta",
+      "visitante": "Operário PR",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401860436",
+      "hora": "20:00",
+      "liga": "Serie B",
+      "pais": "Brazil",
+      "local": "São Bernardo",
+      "visitante": "Athletic",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401878034",
+      "hora": "19:00",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Deportivo Pasto",
+      "visitante": "Atlético Junior",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401877890",
+      "hora": "21:00",
+      "liga": "Primera A",
+      "pais": "Colombia",
+      "local": "Llaneros FC",
+      "visitante": "Boyacá Chicó FC",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401933238",
+      "hora": "20:00",
+      "liga": "Primera Division",
+      "pais": "Uruguay",
+      "local": "Cerro Largo",
+      "visitante": "Progreso",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861147",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Albania",
+      "visitante": "Finland",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861148",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Czechia",
+      "visitante": "Spain",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861150",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "England",
+      "visitante": "Croatia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861151",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Italy",
+      "visitante": "France",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861152",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "Montenegro",
+      "visitante": "Latvia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401861149",
+      "hora": "16:45",
+      "liga": "UEFA Nations League",
+      "pais": "Europe",
+      "local": "San Marino",
+      "visitante": "Belarus",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929778",
+      "hora": "16:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Barbados",
+      "visitante": "Guadeloupe",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929797",
+      "hora": "16:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Cayman Islands",
+      "visitante": "Guyana",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929777",
+      "hora": "17:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Bonaire",
+      "visitante": "Cuba",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929779",
+      "hora": "19:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Aruba",
+      "visitante": "Martinique",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929796",
+      "hora": "20:00",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Antigua and Barbuda",
+      "visitante": "Trinidad and Tobago",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401929776",
+      "hora": "21:30",
+      "liga": "CONCACAF Nations League",
+      "pais": "CONCACAF",
+      "local": "Curaçao",
+      "visitante": "Panama",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401927209",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Benin",
+      "visitante": "Central African Republic",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401927207",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Cameroon",
+      "visitante": "Namibia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401927213",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Ivory Coast",
+      "visitante": "Gambia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401927202",
+      "hora": "16:00",
+      "liga": "Africa Cup of Nations Qualifying",
+      "pais": "Africa",
+      "local": "Senegal",
+      "visitante": "Sudan",
+      "fuente": "ESPN"
+    }
+  ],
+  "recibidos": 28,
+  "analizados": 16,
+  "seleccionados": 5,
   "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
