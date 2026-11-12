@@ -1,6 +1,6 @@
 {
   "fecha": "2026-11-11",
-  "actualizado": "2026-11-11T14:33:12.514246-03:00",
+  "actualizado": "2026-11-11T22:43:52.696784-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -8,17 +8,7 @@
     "Ambos marcan"
   ],
   "partidos": [],
-  "cartelera": [
-    {
-      "id": "espn:401860435",
-      "hora": "19:00",
-      "liga": "Serie B",
-      "pais": "Brazil",
-      "local": "Londrina",
-      "visitante": "Náutico",
-      "fuente": "ESPN"
-    }
-  ],
+  "cartelera": [],
   "recibidos": 1,
   "analizados": 1,
   "seleccionados": 0,
