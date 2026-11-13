@@ -1,9 +1,9 @@
 {
-  "consultado": "2026-11-12T21:47:51.187729-03:00",
+  "consultado": "2026-11-13T14:25:56.812138-03:00",
   "fuente": "ESPN + OpenFootball",
-  "recibidos": 28,
-  "analizados": 16,
-  "seleccionados": 5,
+  "recibidos": 31,
+  "analizados": 15,
+  "seleccionados": 4,
   "estado": "ok",
   "errores": [
     "OpenFootball League One: HTTPError",
