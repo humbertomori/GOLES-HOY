@@ -1,6 +1,6 @@
 {
   "fecha": "2026-11-13",
-  "actualizado": "2026-11-13T14:25:56.812138-03:00",
+  "actualizado": "2026-11-13T21:32:43.148270-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -75,15 +75,6 @@
   ],
   "cartelera": [
     {
-      "id": "espn:401883136",
-      "hora": "16:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Leganés",
-      "visitante": "Burgos",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401877838",
       "hora": "22:30",
       "liga": "Primera A",
@@ -93,174 +84,12 @@
       "fuente": "ESPN"
     },
     {
-      "id": "espn:401933237",
-      "hora": "16:30",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Montevideo City Torque",
-      "visitante": "Racing (Montevideo)",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861155",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Andorra",
-      "visitante": "Gibraltar",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861157",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Bulgaria",
-      "visitante": "Iceland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861153",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Liechtenstein",
-      "visitante": "Azerbaijan",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861154",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Luxembourg",
-      "visitante": "Estonia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861159",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Netherlands",
-      "visitante": "Greece",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861161",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Scotland",
-      "visitante": "North Macedonia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861158",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Serbia",
-      "visitante": "Germany",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861160",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Slovakia",
-      "visitante": "Faroe Islands",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861156",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Slovenia",
-      "visitante": "Switzerland",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929714",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Bermuda",
-      "visitante": "St. Lucia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929713",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Grenada",
-      "visitante": "St. Kitts and Nevis",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929795",
-      "hora": "16:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Puerto Rico",
-      "visitante": "Dominica",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929712",
-      "hora": "20:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "St. Martin",
-      "visitante": "El Salvador",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929775",
-      "hora": "21:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Montserrat",
-      "visitante": "Nicaragua",
-      "fuente": "ESPN"
-    },
-    {
       "id": "espn:401929711",
       "hora": "23:00",
       "liga": "CONCACAF Nations League",
       "pais": "CONCACAF",
       "local": "Guatemala",
       "visitante": "Canada",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401927190",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Egypt",
-      "visitante": "Malawi",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401927185",
-      "hora": "16:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Mali",
-      "visitante": "Rwanda",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401927191",
-      "hora": "17:00",
-      "liga": "Africa Cup of Nations Qualifying",
-      "pais": "Africa",
-      "local": "Morocco",
-      "visitante": "Niger",
       "fuente": "ESPN"
     }
   ],
