@@ -1,6 +1,6 @@
 {
   "fecha": "2026-11-15",
-  "actualizado": "2026-11-15T13:41:36.627560-03:00",
+  "actualizado": "2026-11-15T20:38:42.494107-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -89,125 +89,7 @@
       "resultado": null
     }
   ],
-  "cartelera": [
-    {
-      "id": "espn:401883117",
-      "hora": "14:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Eibar",
-      "visitante": "Cádiz",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401883137",
-      "hora": "14:30",
-      "liga": "LaLiga 2",
-      "pais": "Spain",
-      "local": "Eldense",
-      "visitante": "CD Sabadell",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401933255",
-      "hora": "16:30",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Danubio",
-      "visitante": "Liverpool",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401933376",
-      "hora": "20:00",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Defensor Sporting",
-      "visitante": "Peñarol",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861173",
-      "hora": "14:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Belarus",
-      "visitante": "Albania",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861174",
-      "hora": "14:00",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Finland",
-      "visitante": "San Marino",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861176",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Belgium",
-      "visitante": "Italy",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861178",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Croatia",
-      "visitante": "Czechia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861177",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "France",
-      "visitante": "Türkiye",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401861175",
-      "hora": "16:45",
-      "liga": "UEFA Nations League",
-      "pais": "Europe",
-      "local": "Spain",
-      "visitante": "England",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401929709",
-      "hora": "20:00",
-      "liga": "CONCACAF Nations League",
-      "pais": "CONCACAF",
-      "local": "Panama",
-      "visitante": "Curaçao",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886113",
-      "hora": "15:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Comerciantes Unidos",
-      "visitante": "Sport Boys",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886137",
-      "hora": "17:15",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Juan Pablo II",
-      "visitante": "Deportivo Garcilaso",
-      "fuente": "ESPN"
-    }
-  ],
+  "cartelera": [],
   "recibidos": 18,
   "analizados": 17,
   "seleccionados": 5,
