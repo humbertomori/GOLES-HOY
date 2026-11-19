@@ -1,6 +1,6 @@
 {
   "fecha": "2026-11-18",
-  "actualizado": "2026-11-18T15:30:07.057218-03:00",
+  "actualizado": "2026-11-18T22:33:53.191102-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -57,71 +57,7 @@
       "resultado": null
     }
   ],
-  "cartelera": [
-    {
-      "id": "espn:401841315",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Coritiba",
-      "visitante": "Santos",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841310",
-      "hora": "20:00",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Remo",
-      "visitante": "Chapecoense",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841314",
-      "hora": "20:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Cruzeiro",
-      "visitante": "Palmeiras",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841313",
-      "hora": "20:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Flamengo",
-      "visitante": "Athletico-PR",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841316",
-      "hora": "21:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Corinthians",
-      "visitante": "Botafogo",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841312",
-      "hora": "21:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Grêmio",
-      "visitante": "Bahia",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401886138",
-      "hora": "17:00",
-      "liga": "Liga 1",
-      "pais": "Peru",
-      "local": "Alianza Atlético",
-      "visitante": "Melgar",
-      "fuente": "ESPN"
-    }
-  ],
+  "cartelera": [],
   "recibidos": 7,
   "analizados": 7,
   "seleccionados": 3,
