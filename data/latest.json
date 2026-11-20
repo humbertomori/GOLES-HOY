@@ -1,6 +1,6 @@
 {
   "fecha": "2026-11-19",
-  "actualizado": "2026-11-19T15:44:24.213413-03:00",
+  "actualizado": "2026-11-19T22:30:22.001870-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
@@ -57,71 +57,7 @@
       "resultado": null
     }
   ],
-  "cartelera": [
-    {
-      "id": "espn:401933535",
-      "hora": "21:30",
-      "liga": "MLS",
-      "pais": "USA",
-      "local": "Orlando City SC",
-      "visitante": "FC Cincinnati",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841308",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Vasco da Gama",
-      "visitante": "Internacional",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841317",
-      "hora": "19:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "Vitória",
-      "visitante": "Red Bull Bragantino",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401841309",
-      "hora": "21:30",
-      "liga": "Serie A",
-      "pais": "Brazil",
-      "local": "São Paulo",
-      "visitante": "Fluminense",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401934704",
-      "hora": "16:30",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Boston River",
-      "visitante": "Deportivo Maldonado",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401934686",
-      "hora": "16:30",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Peñarol",
-      "visitante": "Cerro Largo",
-      "fuente": "ESPN"
-    },
-    {
-      "id": "espn:401934703",
-      "hora": "16:30",
-      "liga": "Primera Division",
-      "pais": "Uruguay",
-      "local": "Progreso",
-      "visitante": "Montevideo City Torque",
-      "fuente": "ESPN"
-    }
-  ],
+  "cartelera": [],
   "recibidos": 7,
   "analizados": 7,
   "seleccionados": 3,
