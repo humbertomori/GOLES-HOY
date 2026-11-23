@@ -1,11 +1,17 @@
 {
-  "consultado": "2026-11-22T21:31:47.962938-03:00",
+  "consultado": "2026-11-23T18:48:40.043268-03:00",
   "fuente": "ESPN + OpenFootball",
-  "recibidos": 0,
-  "analizados": 0,
-  "seleccionados": 0,
-  "estado": "error",
+  "recibidos": 27,
+  "analizados": 27,
+  "seleccionados": 10,
+  "estado": "ok",
   "errores": [
-    "Fuentes automáticas: 'list' object has no attribute 'get'"
+    "OpenFootball League One: HTTPError",
+    "OpenFootball League Two: HTTPError",
+    "OpenFootball 2. Bundesliga: HTTPError",
+    "OpenFootball 3. Liga: HTTPError",
+    "OpenFootball Segunda División: HTTPError",
+    "OpenFootball Serie B: HTTPError",
+    "OpenFootball Ligue 2: HTTPError"
   ]
 }
