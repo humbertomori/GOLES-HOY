@@ -1,16 +1,230 @@
 {
-  "fecha": "2026-11-25",
-  "actualizado": "2026-11-25T16:39:36.874837-03:00",
+  "fecha": "2026-11-26",
+  "actualizado": "2026-11-26T16:20:28.045589-03:00",
   "zona": "America/Asuncion",
   "fuente": "ESPN + OpenFootball (respaldo)",
   "mercados": [
     "Más de 2.5 goles",
     "Ambos marcan"
   ],
-  "partidos": [],
-  "cartelera": [],
-  "recibidos": 0,
-  "analizados": 0,
-  "seleccionados": 0,
-  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. No se encontraron partidos en las ligas cubiertas; esto no significa que no haya fútbol hoy. Incidencias de fuentes: Fuentes automáticas: 'list' object has no attribute 'get'"
+  "partidos": [
+    {
+      "id": "espn:401915512",
+      "hora": "2026-11-26T20:00Z",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Torreense",
+      "visitante": "Celtic",
+      "prob_mas_2_5": 86.5,
+      "prob_btts": 96.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Ambos marcan",
+      "probabilidad": 96.0,
+      "estado": "pendiente",
+      "resultado": null
+    },
+    {
+      "id": "espn:401915502",
+      "hora": "2026-11-26T20:00Z",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Juventus",
+      "visitante": "Omonia Nicosia",
+      "prob_mas_2_5": 75.5,
+      "prob_btts": 60.0,
+      "muestra": 8,
+      "fuente": "ESPN",
+      "mercado": "Más de 2.5",
+      "probabilidad": 75.5,
+      "estado": "pendiente",
+      "resultado": null
+    }
+  ],
+  "cartelera": [
+    {
+      "id": "espn:401841329",
+      "hora": "20:00",
+      "liga": "Serie A",
+      "pais": "Brazil",
+      "local": "São Paulo",
+      "visitante": "Remo",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915504",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Crystal Palace",
+      "visitante": "Real Sociedad",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915516",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Ferencvaros",
+      "visitante": "NK Celje",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915502",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Juventus",
+      "visitante": "Omonia Nicosia",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915501",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Lyon",
+      "visitante": "Lillestrom",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915505",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "NEC Nijmegen",
+      "visitante": "Stade Rennais",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915503",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "OFI Crete",
+      "visitante": "Anderlecht",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915514",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Sparta Prague",
+      "visitante": "AZ Alkmaar",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915513",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Sunderland",
+      "visitante": "Jagiellonia Bialystok",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915512",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "Torreense",
+      "visitante": "Celtic",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915515",
+      "hora": "17:00",
+      "liga": "Europa League",
+      "pais": "Europe",
+      "local": "TSG Hoffenheim",
+      "visitante": "SK Sturm Graz",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915806",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Borac Banja Luka",
+      "visitante": "Atalanta",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915802",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Braga",
+      "visitante": "KuPS Kuopio",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915803",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "CSKA Sofia",
+      "visitante": "Trabzonspor",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915807",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "FC Nordsjælland",
+      "visitante": "Panathinaikos",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915805",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Hajduk Split",
+      "visitante": "Sint-Truidense",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915738",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "Inter D'Escaldes",
+      "visitante": "F.C. København",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915804",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "KAA Gent",
+      "visitante": "Red Star Belgrade",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401915801",
+      "hora": "17:00",
+      "liga": "Conference League",
+      "pais": "Europe",
+      "local": "SC Freiburg",
+      "visitante": "FC Twente",
+      "fuente": "ESPN"
+    },
+    {
+      "id": "espn:401931982",
+      "hora": "22:00",
+      "liga": "Liga MX",
+      "pais": "Mexico",
+      "local": "Pachuca",
+      "visitante": "Guadalajara",
+      "fuente": "ESPN"
+    }
+  ],
+  "recibidos": 38,
+  "analizados": 20,
+  "seleccionados": 2,
+  "advertencia": "Análisis automático calculado con datos públicos disponibles de ESPN/OpenFootball. Las probabilidades son estimaciones estadísticas, no garantías. No se inventan cuotas: si no hay una fuente verificable, no se muestran. Incidencias de fuentes: OpenFootball League One: HTTPError; OpenFootball League Two: HTTPError; OpenFootball 2. Bundesliga: HTTPError; OpenFootball 3. Liga: HTTPError; OpenFootball Segunda División: HTTPError"
 }
